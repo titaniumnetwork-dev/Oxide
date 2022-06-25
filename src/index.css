@@ -10,22 +10,36 @@
   --text: #b29dc6;
 }
 
+/* HU Animations since yeah fancy effect that I like */
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
 * {
+  min-height: 100%;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
   color: var(--text);
-}
-
-html,
-body {
-  min-height: 100%;
   scrollbar-width: thin;
-  scrollbar-color: var(--primary --secondary);
-}
-
-html {
+  scrollbar-color: var(--primary);
   font-family: "Raleway", sans-serif;
 }
 
@@ -70,29 +84,6 @@ body {
   animation-fill-mode: forwards;
 }
 
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-}
-
-.text-center {
-  text-align: center;
-}
-
 .background {
   position: fixed;
   left: 0px;
@@ -106,8 +97,7 @@ body {
   background-size: cover;
 }
 
-.brand {
-  margin: 20px 0px;
+.sitetitle {
   padding: 3px 8px;
   display: inline-flex;
   align-items: center;
@@ -119,17 +109,17 @@ body {
   cursor: pointer;
 }
 
-.brand > a {
+.sitetitle > a {
   color: var(--text);
   text-decoration: none;
 }
 
-.brand > img {
-  margin: 0 10px;
+.sitetitle:hover {
+  animation: pulse 1s;
 }
 
-.brand:hover {
-  animation: pulse 1s;
+.responsive {
+  display: none;
 }
 
 .navbar {
@@ -191,7 +181,6 @@ body {
 }
 
 .header-text {
-  padding-bottom: 30px;
   font-size: 40px;
   text-transform: uppercase;
 }
@@ -247,4 +236,92 @@ body {
 
 .button-right {
   margin-left: 20px;
+}
+
+@media screen and (max-width: 1800px) {
+  .navbar {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .navbar {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .container {
+    left: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .sitetitle {
+    padding: 3px 5px;
+    font-size: 25.5px;
+  }
+
+  .navbar {
+    width: 40%;
+  }
+
+  .container {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .header {
+    padding-top: 3vh;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .responsive {
+    display: inline-block;
+  }
+
+  .container {
+    left: 30px;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .container {
+    width: 400px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sitetitle {
+    letter-spacing: 2px;
+  }
+
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    width: 300px;
+  }
+
 }

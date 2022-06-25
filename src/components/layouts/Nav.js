@@ -1,8 +1,11 @@
 function Nav() {
   return (
     <nav class="header">
-      <div className="brand">
+      <div className="sitetitle">
         <a href="/">Titanium Network</a>
+      </div>
+      <div className="responsive">
+        <i class="fa-solid fa-bars"></i>
       </div>
       <ul id="navbar-sel" className="navbar">
         <li>
