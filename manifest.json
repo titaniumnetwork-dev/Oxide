@@ -1,0 +1,15 @@
+{
+  "short_name": "Oxide",
+  "name": "Oxide | The Official TN Site",
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#b29dc6",
+  "background_color": "#1f003e"
+}
