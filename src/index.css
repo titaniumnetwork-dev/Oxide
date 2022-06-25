@@ -1,13 +1,250 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://unpkg.com/@fortawesome/fontawesome-free@6.1.1/css/all.min.css");
+
+:root {
+  --light-bg: #1f003e;
+  --primary: #d34644;
+  --secondary: #250c3a;
+  --text: #b29dc6;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  color: var(--text);
+}
+
+html,
+body {
+  min-height: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary --secondary);
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+}
+
+html::-webkit-scrollbar {
+  width: 16px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #250c3a;
+  border-radius: 100px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #d34644;
+  border-radius: 100px;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  margin: 0px;
+  background-color: var(--light-bg);
+}
+
+::selection {
+  background: #372551;
+}
+::-moz-selection {
+  background: #372551;
+}
+
+.header {
+  min-height: 10vh;
+  padding-bottom: 10vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  animation: fadeInAnimation ease-in-out 0.7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.background {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  box-sizing: border-box;
+  background: url("components/svg/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.brand {
+  margin: 20px 0px;
+  padding: 3px 8px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--text);
+  border-radius: 3px;
+  letter-spacing: 8px;
+  font-size: 32.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.brand > a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand > img {
+  margin: 0 10px;
+}
+
+.brand:hover {
+  animation: pulse 1s;
+}
+
+.navbar {
+  margin: 20px 0px;
+  padding: 0px;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.navbar > li {
+  margin: 20px 0px;
+  padding: 3px 8px;
+  float: left;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.navbar > li > a {
+  color: var(--text);
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.navbar > li > a:hover {
+  animation: pulse 1s;
+}
+
+.social-link {
+  font-size: 20px;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  margin: 10vh 0px;
+  box-sizing: border-box;
+  animation: fadeInAnimation ease-in-out 0.7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.container {
+  position: relative;
+  width: 980px;
+  left: 210px;
+  bottom: 0vh;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 3px;
+  font-family: "Raleway", sans-serif;
+}
+
+.container > div > a {
+  font-size: 20px;
+}
+
+.header-text {
+  padding-bottom: 30px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.button {
+  position: relative;
+  color: var(--text);
+  padding: 20px;
+  line-height: 64px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.button::before {
+  left: 4px;
+  z-index: 1;
+
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(0.1, 1);
+}
+
+.button:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.button::after {
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.button:hover::after {
+  transform: scale(1, 0.1);
+  opacity: 0;
+}
+
+.button-right {
+  margin-left: 20px;
 }
