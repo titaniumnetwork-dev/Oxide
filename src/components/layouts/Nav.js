@@ -9,7 +9,7 @@ function Nav() {
       </div>
       <ul id="navbar-sel" className="navbar">
         <li>
-          <a href="/panel">Panel</a>
+          <a href="/setup">Setup</a>
         </li>
         <li>
           <a href="/services">Services</a>

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 @import url("https://unpkg.com/@fortawesome/fontawesome-free@6.1.1/css/all.min.css");
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 
 :root {
   --light-bg: #1f003e;
@@ -75,7 +76,7 @@ body {
 
 .header {
   min-height: 10vh;
-  padding-bottom: 10vw;
+  padding-bottom: 2vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -174,6 +175,20 @@ body {
   justify-content: center;
   letter-spacing: 3px;
   font-family: "Raleway", sans-serif;
+}
+
+.docs {
+  position: relative;
+  width: 780px;
+  left: 100px;
+  letter-spacing: 3px;
+  font-family: "Raleway", sans-serif;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.docs > h1, h2 {
+  margin-bottom: 20px;
 }
 
 .container > div > a {

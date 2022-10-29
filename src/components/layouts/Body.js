@@ -22,7 +22,7 @@ function Home() {
               employed by institutions like schools and workplaces.
             </p>
             <div className="button-group">
-              <a className="button" href="#get-started">
+              <a className="button" href="/setup">
                 Get Started
               </a>
               <a
