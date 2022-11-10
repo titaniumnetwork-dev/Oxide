@@ -253,6 +253,29 @@ body {
   margin-left: 20px;
 }
 
+@keyframes pulse {
+  0%,
+  100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+}
+
+.service-lists>li>div {
+  display: inline-block;
+  padding-inline-start: 0.5em;
+}
+
+.service-lists>li>div>a {
+  text-decoration: none;
+}
+
+.service-lists>li>div:hover {
+  animation: pulse 0.3s;
+}
+
 @media screen and (max-width: 1800px) {
   .navbar {
     width: 30%;

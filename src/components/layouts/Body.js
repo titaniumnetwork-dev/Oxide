@@ -17,9 +17,7 @@ function Home() {
           <div data-aos="fade-right">
             <p className="header-text">The Service Hub for Titanium Network</p>
             <p>
-              Titanium Network is an organization dedicated to providing free
-              access to information by bypassing over-restrictive filters
-              employed by institutions like schools and workplaces.
+            Titanium Network is an organization dedicated to providing services related to bypassing internet censorship. Our projects expect to provide users, and itself, with a less restrictive browsing experience. For this TN prioritizes the production and improvement of web proxy technologies.
             </p>
             <div className="button-group">
               <a className="button" href="/setup">
@@ -27,7 +25,7 @@ function Home() {
               </a>
               <a
                 className="button button-right"
-                href="https://github.com/QuiteAFancyEmerald"
+                href="https://github.com/titaniumnetwork-dev"
               >
                 Documentation
               </a>
