@@ -126,7 +126,6 @@ body {
 .navbar {
   margin: 20px 0px;
   padding: 0px;
-  width: 30%;
   display: flex;
   justify-content: space-around;
   overflow: hidden;

@@ -18,7 +18,7 @@ function Nav() {
           <a href="/documentation">Docs</a>
         </li>
         <li>
-          <a href="/socials">Socials</a>
+          <a href="#">Panel</a>
         </li>
         <li className="social-link">
           <a href="https://discord.gg/unblock">
