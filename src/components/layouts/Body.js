@@ -15,15 +15,15 @@ function Home() {
       <div className="content">
         <div className="container">
           <div data-aos="fade-right">
-            <p className="header-text">The Service Hub for Titanium Network</p>
-            <p>
+            <p title="Titanium Network is a provider of various web proxy services for unblocking sites and bypassing censorship." className="header-text">The Service Hub for Titanium Network</p>
+            <p title="What is Titanium Network?">
             Titanium Network is an organization dedicated to providing services related to bypassing internet censorship. Our projects expect to provide users, and itself, with a less restrictive browsing experience. For this TN prioritizes the production and improvement of web proxy technologies.
             </p>
             <div className="button-group">
-              <a className="button" href="/setup">
+              <a title="Wondering on how to unblock sites or self-host?" className="button" href="/setup">
                 Get Started
               </a>
-              <a
+              <a title="Look here for either contributing or hosting your own web proxy service using our various open-source projects!"
                 className="button button-right"
                 href="https://github.com/titaniumnetwork-dev"
               >
