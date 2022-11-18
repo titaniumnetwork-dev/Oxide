@@ -16,6 +16,7 @@ function Home() {
         <div className="container">
           <div data-aos="fade-right">
             <p title="Titanium Network is a provider of various web proxy services for unblocking sites and bypassing censorship." className="header-text">The Service Hub for Titanium Network</p>
+            <p title="This is the mobile version of Titanium Network's documentation service, ProxyDocs." className="header-text-mobile">TN Service Hub</p>
             <p title="What is Titanium Network?">
             Titanium Network is an organization dedicated to providing services related to bypassing internet censorship. Our projects expect to provide users, and itself, with a less restrictive browsing experience. For this TN prioritizes the production and improvement of web proxy technologies.
             </p>

@@ -28,22 +28,22 @@ function SetupBody() {
             <p>Often times, a proxy site that is open source will include basic setup instructions for their site. These instructions normally include how to clone the repository, and how to run or &quot;start&quot; the backend web proxy, as well as serve the static files of the site.</p>
             <br></br><h2 id="cloning">Cloning</h2>
             <p>Cloning a proxy is as simple as running <code>git clone</code>, and then the link to the repository. See an example below:</p>
-            <br></br><pre><code class="lang-sh">$ git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://titaniumnetwork-dev/Ultraviolet-Node
+            <br></br><pre><code className="lang-sh">$ git <span className="hljs-keyword">clone</span> <span className="hljs-title">https</span>://titaniumnetwork-dev/Ultraviolet-Node
             </code></pre>
             <br></br>
             <p>Be sure to replace <code>titaniumnetwork-dev/Ultraviolet-Node</code> with the repo to the proxy you are trying to clone, assuming you are not trying to clone Degeneracy.</p>
             <br></br><h2 id="installing-dependencies">Installing Dependencies</h2>
             <p>Web proxies and proxy sites will have dependencies in order to get them up and running. In general, a proxy site will use a Node.js framework to serve static files and <a href="https://www.npmjs.com">NPM</a> to install dependencies.
             <br></br><br></br>To install dependencies, you will need to cd into the repository you just cloned and then run <code>npm install</code> The commands can be seen below:</p>
-            <br></br><pre><code class="lang-sh"><span class="hljs-variable">$ </span>cd RepoName
-            <br></br><span class="hljs-variable">$ </span>npm install</code></pre>
+            <br></br><pre><code className="lang-sh"><span className="hljs-variable">$ </span>cd RepoName
+            <br></br><span className="hljs-variable">$ </span>npm install</code></pre>
             <br></br><p>Be sure to change &quot;RepoName&quot; to the actual name of the repo you just cloned.</p>
             <br></br><h2 id="starting-the-site">Starting the Site</h2>
             <br></br><p>Sometimes the creator of a site will include a start script in npm that makes it as simple as possible to start the proxy. See the command below:</p>
             <br></br><pre><code >$ <span>npm</span> start
             </code></pre>
             <br></br><p>Assuming the site does not include a start script, you will have to find the index file manually. In general, the file name will be something along the lines of <code>main.js</code>, <code>index.js</code> or <code>start.js</code>. To run the file, simply run the following command:</p>
-            <pre><code class="lang-sh">$ <span class="hljs-keyword">node</span> <span class="hljs-title">filename</span>.js
+            <pre><code className="lang-sh">$ <span className="hljs-keyword">node</span> <span className="hljs-title">filename</span>.js
             </code></pre>
             <br></br><p>Be sure to exclude the curly brackets and change <code>filename</code> to the actual name of the file you are trying to run.</p>
           </div>

@@ -31,7 +31,7 @@ function DocsBody() {
             <br></br><h2 id="contributing">Contributing</h2>
             <p>See <a href="https://github.com/Degen-dev/ProxDocs/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> for information on contributing to ProxDocs.</p>
             <br></br><h2 id="license">License</h2><br></br>
-            <p>Copyright (C) <span class="hljs-number">2022</span>, Degen-dev; GNU</p>
+            <p>Copyright (C) <span className="hljs-number">2022</span>, Degen-dev; GNU</p>
           </div>
         </div>
       </div>

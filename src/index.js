@@ -8,6 +8,7 @@ import Docs from "./components/docs/Docs";
 import Setup from "./components/docs/Setup";
 import Services from "./components/docs/Services"
 import Configuration from "./components/docs/Configuration"
+import Socials from "./components/Socials";
 
 const root = ReactDOM.createRoot(document.getElementById("content"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
       <Route path="/documentation" element={<Docs />} />
       <Route path="/setup" element={<Setup />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/socials" element={<Socials />} />
       <Route path="/configuration" element={<Configuration />} />
     </Routes>
   </BrowserRouter>

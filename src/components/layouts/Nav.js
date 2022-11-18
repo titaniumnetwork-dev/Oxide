@@ -1,11 +1,11 @@
 function Nav() {
   return (
-    <nav class="header">
+    <nav className="header">
       <div className="sitetitle">
         <a href="/">Titanium Network</a>
       </div>
       <div className="responsive">
-        <i class="fa-solid fa-bars"></i>
+        <i className="fa-solid fa-bars"></i>
       </div>
       <ul id="navbar-sel" className="navbar">
         <li>
@@ -15,10 +15,10 @@ function Nav() {
           <a href="/services">Services</a>
         </li>
         <li>
-          <a href="/documentation">Docs</a>
+          <a href="/socials">Socials</a>
         </li>
         <li>
-          <a href="#">Panel</a>
+          <a href="/documentation">Docs</a>
         </li>
         <li className="social-link">
           <a href="https://discord.gg/unblock">
