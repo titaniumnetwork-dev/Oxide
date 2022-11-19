@@ -26,7 +26,7 @@ function Home() {
               </a>
               <a title="Look here for either contributing or hosting your own web proxy service using our various open-source projects!"
                 className="button button-right"
-                href="https://github.com/titaniumnetwork-dev"
+                href="https://docs.titaniumnetwork.org"
               >
                 Documentation
               </a>

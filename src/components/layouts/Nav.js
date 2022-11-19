@@ -18,7 +18,7 @@ function Nav() {
           <a href="/socials">Socials</a>
         </li>
         <li>
-          <a href="/documentation">Docs</a>
+          <a href="https://docs.titaniumnetwork.org">Docs</a>
         </li>
         <li className="social-link">
           <a href="https://discord.gg/unblock">
