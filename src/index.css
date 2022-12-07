@@ -8,7 +8,7 @@
   --light-bg: #1f003e;
   --primary: #d34644;
   --secondary: #250c3a;
-  --text: #b29dc6;
+  --text: #FFF;
 }
 
 /* HU Animations since yeah fancy effect that I like */
@@ -60,6 +60,7 @@ html::-webkit-scrollbar-thumb {
 
 body {
   position: absolute;
+  text-shadow: 2px 2px 11px black;
   width: 100%;
   left: 0px;
   top: 0px;
