@@ -1,32 +1,42 @@
-# Oxide <img align="right" width="200px" src="https://raw.githubusercontent.com/QuiteAFancyEmerald/Oxide/master/public/logo.png?raw"></img>
+# Oxide <img align="right" width="200px" src="https://raw.githubusercontent.com/titaniumnetwork-dev/Oxide/master/public/logo.png?raw"></img>
+
 ### The official documentation site for Titanium Network.
 
 <a href="https://discord.gg/unblock">Official Discord</a>
 
-#### (Made in React)
-
 #### Overview
-Titanium Network is an organization dedicated to providing services related to bypassing internet censorship.
 
-This repository serves as the source code for the official Titanium Network site with the project name "Oxide." Features will be listed below and if you wish to many any contributions please make a well formatted PR!
+Titanium Network is an organization dedicated to providing services related to bypassing internet censorship. Our projects expect to provide users, and itself, with a less restrictive browsing experience. For this TN prioritizes the production and improvement of web proxy technologies.
 
-#### Features
-- Documentation related to any TN web proxies
-- Proxy panel to serve as an alternative to the current Discord bot setup
-- Proper references to any official Titanium Network services
+#### Purpose/Features
+
+- Link to [Oxide-Docs](https://github.com/titaniumnetwork-dev/Oxide-Docs)
+- Setup page which provides instructions on how to use a web proxy service or Kajigs
+- Services page which provides an overview of the available services
+- Socials page which provides links to all of the official social media accounts
 
 #### Setup
-Make sure to have both Node.js installed and git.
 
-```
-git clone https://github.com/QuiteAFancyEmerald/Oxide.git
+Make sure to have both Node.js and npm installed.
+
+```bash
+git clone https://github.com/titaniumnetwork-dev/Oxide.git
 cd Oxide
 npm install
-npm start
+npm run dev
 ```
+
 A browser tab will automatically open to `localhost:3000` (the default port).
 
+For production, use the the commands:
+
+```bash
+npm run build
+npm start
+```
+
 #### Contributors
+
 A general list for any contributors. If you make a contribution add yourself here!
 
 - QuiteAFancyEmerald (Quite A Fancy Emerald#0001)
