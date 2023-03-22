@@ -1,4 +1,4 @@
-# Oxide <img align="right" width="200px" src="https://raw.githubusercontent.com/titaniumtetwork-dev/Oxide/master/public/logo.png?raw"></img>
+# Oxide <img align="right" width="200px" src="https://raw.githubusercontent.com/titaniumnetwork-dev/Oxide/master/public/logo.png?raw"></img>
 ### The official documentation site for Titanium Network.
 (Made in React)
 
@@ -18,7 +18,7 @@ This repository serves as the source code for the official Titanium Network site
 Make sure to have Node.js, yarn and git installed.
 
 ```
-git clone https://github.com/titaniumtetwork-dev/Oxide.git
+git clone https://github.com/titaniumnetwork-dev/Oxide.git
 cd Oxide
 yarn
 yarn dev
