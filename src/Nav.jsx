@@ -1,32 +1,34 @@
+import { Link } from "react-router-dom";
+
 function Nav() {
   return (
     <nav className="header">
       <div className="sitetitle">
-        <a href="/">Titanium Network</a>
+        <Link to="/">Titanium Network</Link>
       </div>
       <div className="responsive">
         <i className="fa-solid fa-bars"></i>
       </div>
       <ul id="navbar-sel" className="navbar">
         <li>
-          <a href="/setup">Setup</a>
+          <Link to="/setup">Setup</Link>
         </li>
         <li>
-          <a href="/services">Services</a>
+          <Link to="/services">Services</Link>
         </li>
         <li>
-          <a href="/socials">Socials</a>
+          <Link to="/socials">Socials</Link>
         </li>
         <li>
-          <a href="https://docs.titaniumnetwork.org">Docs</a>
+          <a href="https://docs.titaniumnetwork.org" target="_blank">Docs</a>
         </li>
         <li className="social-link">
-          <a href="https://discord.gg/unblock">
+          <a href="https://discord.gg/unblock" target="_blank">
             <i className="fa-brands fa-discord"></i>
           </a>
         </li>
         <li className="social-link">
-          <a href="https://github.com/titaniumnetwork-dev">
+          <a href="https://github.com/titaniumnetwork-dev" target="_blank">
             <i className="fa-brands fa-github"></i>
           </a>
         </li>

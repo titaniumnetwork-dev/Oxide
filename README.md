@@ -1,9 +1,8 @@
-# Oxide <img align="right" width="200px" src="https://raw.githubusercontent.com/QuiteAFancyEmerald/Oxide/master/public/logo.png?raw"></img>
+# Oxide <img align="right" width="200px" src="https://raw.githubusercontent.com/titaniumtetwork-dev/Oxide/master/public/logo.png?raw"></img>
 ### The official documentation site for Titanium Network.
+(Made in React)
 
-<a href="https://discord.gg/unblock">Official Discord</a>
-
-#### (Made in React)
+[Official Discord](https://discord.gg/unblock)
 
 #### Overview
 Titanium Network is an organization dedicated to providing services related to bypassing internet censorship.
@@ -16,20 +15,22 @@ This repository serves as the source code for the official Titanium Network site
 - Proper references to any official Titanium Network services
 
 #### Setup
-Make sure to have both Node.js installed and git.
+Make sure to have Node.js, yarn and git installed.
 
 ```
-git clone https://github.com/QuiteAFancyEmerald/Oxide.git
+git clone https://github.com/titaniumtetwork-dev/Oxide.git
 cd Oxide
-npm install
-npm start
+yarn
+yarn dev
 ```
-A browser tab will automatically open to `localhost:3000` (the default port).
+
+Go to http://localhost:5173 (the default port) to view the dev server.
 
 #### Contributors
 A general list for any contributors. If you make a contribution add yourself here!
 
 - QuiteAFancyEmerald (Quite A Fancy Emerald#0001)
 - Caracal.js (sexyduceduce#6722)
+- mdoryammilwalrus
 
 If you wish to support Titanium Network please check out our Discord!
