@@ -8,7 +8,7 @@
   --light-bg: #1f003e;
   --primary: #d34644;
   --secondary: #250c3a;
-  --text: #FFF;
+  --text: #fff;
 }
 
 /* HU Animations since yeah fancy effect that I like */
@@ -94,7 +94,7 @@ body {
   height: 100%;
   z-index: -1;
   box-sizing: border-box;
-  background: url("components/svg/background.svg");
+  background: url("/background.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -191,7 +191,7 @@ body {
   padding: 30px;
 }
 
-.docs>p {
+.docs > p {
   color: #000;
 }
 
@@ -199,7 +199,8 @@ body {
   display: none;
 }
 
-.docs > h1, h2 {
+.docs > h1,
+h2 {
   margin-bottom: 20px;
 }
 
@@ -268,24 +269,24 @@ body {
 @keyframes pulse {
   0%,
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
   50% {
-      transform: scale(1.05);
+    transform: scale(1.05);
   }
 }
 
-.service-lists>li>div {
+.service-lists > li > div {
   display: inline-block;
   padding-inline-start: 0.5em;
   margin-top: 5px;
 }
 
-.service-lists>li>div>a {
+.service-lists > li > div > a {
   text-decoration: none;
 }
 
-.service-lists>li>div:hover {
+.service-lists > li > div:hover {
   animation: pulse 0.3s;
 }
 
@@ -344,14 +345,14 @@ body {
     left: 30px;
   }
 
-  .button-group>.button {
+  .button-group > .button {
     display: block;
   }
 
   .button-group {
     margin-top: 0px;
   }
-  
+
   .button {
     padding: 10px;
     line-height: 20px;
@@ -380,7 +381,6 @@ body {
     border: #b29dc652 solid 1px;
     padding: 30px;
   }
-
 }
 
 @media screen and (max-width: 550px) {
@@ -392,7 +392,6 @@ body {
   .container {
     width: 400px;
   }
-
 }
 
 @media screen and (max-width: 500px) {
@@ -404,12 +403,10 @@ body {
   .sitetitle {
     letter-spacing: 2px;
   }
-
 }
 
 @media screen and (max-width: 430px) {
   .container {
     width: 300px;
   }
-
 }

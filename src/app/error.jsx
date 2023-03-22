@@ -1,15 +1,8 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+"use client";
 
-function ErrorBody() {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
-
+export default function Error() {
   return (
-    <React.Fragment>
+    <>
       <div className="background"></div>
       <div className="content">
         <div className="container">
@@ -18,8 +11,6 @@ function ErrorBody() {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }
-
-export default ErrorBody;

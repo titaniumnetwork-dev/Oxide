@@ -1,4 +1,4 @@
-function Nav() {
+export default function Nav() {
   return (
     <nav className="header">
       <div className="sitetitle">
@@ -34,5 +34,3 @@ function Nav() {
     </nav>
   );
 }
-
-export default Nav;
