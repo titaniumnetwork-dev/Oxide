@@ -1,4 +1,7 @@
-export const metadata = {
+import { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
   title: "Documentation",
 };
 
@@ -29,23 +32,10 @@ export default function Documentation() {
             <h2 id="table-of-contents">Table Of Contents</h2>
             <ul>
               <li>
-                <a href="/setup">Setup</a>
+                <Link href="/setup">Setup</Link>
               </li>
               <li>
-                <a href="/configuration">Configuration</a>
-              </li>
-              <li>
-                <a href="/hosting">Hosting</a>
-              </li>
-              <li>
-                <a href="/domains">Domains</a>
-              </li>
-              <li>
-                <a href="/nginx-setup">Nginx</a>
-              </li>
-              <li>
-                <a href="/ssl-setup">SSL/TLS</a>
-                <br></br>
+                <Link href="/configuration">Configuration</Link>
               </li>
             </ul>
             <br></br>

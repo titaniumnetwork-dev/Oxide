@@ -1,34 +1,36 @@
+import Link from "next/link";
+
 export default function Nav() {
   return (
     <nav className="header">
       <div className="sitetitle">
-        <a href="/">Titanium Network</a>
+        <Link href="/">Titanium Network</Link>
       </div>
       <div className="responsive">
         <i className="fa-solid fa-bars"></i>
       </div>
       <ul id="navbar-sel" className="navbar">
         <li>
-          <a href="/setup">Setup</a>
+          <Link href="/setup">Setup</Link>
         </li>
         <li>
-          <a href="/services">Services</a>
+          <Link href="/services">Services</Link>
         </li>
         <li>
-          <a href="/socials">Socials</a>
+          <Link href="/socials">Socials</Link>
         </li>
         <li>
-          <a href="https://docs.titaniumnetwork.org">Docs</a>
+          <Link href="https://docs.titaniumnetwork.org">Docs</Link>
         </li>
         <li className="social-link">
-          <a href="https://discord.gg/unblock">
+          <Link href="https://discord.gg/unblock">
             <i className="fa-brands fa-discord"></i>
-          </a>
+          </Link>
         </li>
         <li className="social-link">
-          <a href="https://github.com/titaniumnetwork-dev">
+          <Link href="https://github.com/titaniumnetwork-dev">
             <i className="fa-brands fa-github"></i>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
