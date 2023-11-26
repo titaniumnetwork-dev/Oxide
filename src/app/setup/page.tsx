@@ -13,7 +13,7 @@ export default function Setup() {
           <div data-aos="fade-right">
             <h1 id="usage">Usage</h1>
             <p>
-              Titanium Network's services can be utlized either by hosting
+              Titanium Network's services can be utilized either by hosting them
               manually or using the officially hosted services. These servies
               such as Holy Unblocker or Incognito can be obtained in the{" "}
               <a href="discord.gg/unblock">TN Discord</a> with a brief overview
@@ -39,13 +39,13 @@ export default function Setup() {
             <br></br>
             <h3>Kajigs</h3>
             <p>
-              A repository of methods/exploits (found in the TN discord)
-              maintained by Titanium Network you can employ enabling you to
+              A repository of methods/exploits (found in the TN Discord)
+              maintained by Titanium Network that you can employ, enabling you to
               bypass restrictions!
             </p>
             <br></br>
             <p>
-              These exploits range from WebView bypasses, Extension bypasses,
+              These exploits range from WebView bypasses, extension bypasses,
               chromeOS vulnerabilities, Windows elevation bypasses, and most web
               filter bypasses.
             </p>
