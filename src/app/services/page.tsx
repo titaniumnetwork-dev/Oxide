@@ -21,9 +21,9 @@ export default function Services() {
                 </div>
               </li>
               <li>
-                <a href="https://incog.dev">Incognito</a>
+                <a href="https://anura.pro/">Anura OS</a>
                 <div>
-                  <a href="https://incog.dev">❐</a>
+                  <a href="https://anura.pro/">❐</a>
                 </div>
               </li>
               <li>
@@ -39,15 +39,15 @@ export default function Services() {
                 </div>
               </li>
               <li>
-                <a href="https://hypertabs.cc">Hypertabs</a>
+                <a href="https://flow-works.me/">FlowOS</a>
                 <div>
-                  <a href="https://hypertabs.cc">❐</a>
+                  <a href="https://flow-works.me/">❐</a>
                 </div>
               </li>
               <li>
-                <a href="https://illusive.app/">Illusive</a>
+                <a href="https://kazwire.com/">Kazwire</a>
                 <div>
-                  <a href="https://illusive.app/">❐</a>
+                  <a href="https://kazwire.com/">❐</a>
                 </div>
               </li>
               <li>
@@ -60,6 +60,18 @@ export default function Services() {
                 <a href="https://ludicrous.icu/">Ludicrous</a>
                 <div>
                   <a href="https://ludicrous.icu/">❐</a>
+                </div>
+              </li>
+              <li>
+                <a href="https://totallyscience.co/">Totally Science</a>
+                <div>
+                  <a href="https://totallyscience.co/">❐</a>
+                </div>
+              </li>
+              <li>
+                <a href="https://github.com/BinBashBanana/webretro">webretro</a>
+                <div>
+                  <a href="https://github.com/BinBashBanana/webretro">❐</a>
                 </div>
               </li>
             </ul>
