@@ -1,3 +1,37 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+User-agent: Googlebot
+Allow: /
+Allow: /setup
+Allow: /services
+Allow: /socials
+
+User-agent: Bingbot
+Allow: /
+Allow: /setup
+Allow: /services
+Allow: /socials
+
+User-agent: Slurp
+Allow: /
+Allow: /setup
+Allow: /services
+Allow: /socials
+
+User-agent: DuckDuckBot
+Allow: /
+Allow: /setup
+Allow: /services
+Allow: /socials
+
+User-agent: Baiduspider
+Allow: /
+Allow: /setup
+Allow: /services
+Allow: /socials
+
+User-agent: YandexBot
+Allow: /
+Allow: /setup
+Allow: /services
+Allow: /socials
+
+Sitemap: https://titaniumnetwork.org/sitemap.xml
