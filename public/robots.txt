@@ -1,37 +1,54 @@
 User-agent: Googlebot
 Allow: /
-Allow: /setup
+Allow: /kajigs
 Allow: /services
-Allow: /socials
+Allow: /proxies
+Allow: /guides
+Allow: /mercurywork
+Allow: /tomphttp
 
 User-agent: Bingbot
 Allow: /
-Allow: /setup
+Allow: /kajigs
 Allow: /services
-Allow: /socials
+Allow: /proxies
+Allow: /guides
+Allow: /mercurywork
+Allow: /tomphttp
+
 
 User-agent: Slurp
 Allow: /
-Allow: /setup
+Allow: /kajigs
 Allow: /services
-Allow: /socials
+Allow: /proxies
+Allow: /guides
+Allow: /mercurywork
+Allow: /tomphttp
 
 User-agent: DuckDuckBot
 Allow: /
-Allow: /setup
+Allow: /kajigs
 Allow: /services
-Allow: /socials
+Allow: /proxies
+Allow: /guides
+Allow: /mercurywork
+Allow: /tomphttp
 
 User-agent: Baiduspider
 Allow: /
-Allow: /setup
+Allow: /kajigs
 Allow: /services
-Allow: /socials
+Allow: /proxies
+Allow: /guides
+Allow: /mercurywork
+Allow: /tomphttp
 
 User-agent: YandexBot
 Allow: /
-Allow: /setup
+Allow: /kajigs
 Allow: /services
-Allow: /socials
-
-Sitemap: https://titaniumnetwork.org/sitemap.xml
+Allow: /proxies
+Allow: /guides
+Allow: /mercurywork
+Allow: /tomphttp
