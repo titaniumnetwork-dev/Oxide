@@ -16,21 +16,25 @@ export default function Nav() {
         <li>
           <Link href="/services">Services</Link>
         </li>
+		<li>
+		  {/* replace when finished */}
+		  <a href="#">Kajigs</a>
+        </li>
         <li>
           <Link href="/socials">Socials</Link>
         </li>
         <li>
-          <Link href="https://docs.titaniumnetwork.org">Docs</Link>
+          <a href="https://docs.titaniumnetwork.org">Docs</a>
         </li>
         <li className="social-link">
-          <Link href="https://discord.gg/unblock">
+          <a href="https://discord.gg/unblock" target="_blank">
             <i className="fa-brands fa-discord"></i>
-          </Link>
+          </a>
         </li>
         <li className="social-link">
-          <Link href="https://github.com/titaniumnetwork-dev">
+          <a href="https://github.com/titaniumnetwork-dev" target="_blank">
             <i className="fa-brands fa-github"></i>
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>

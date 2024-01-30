@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import disabled from "../../lib/disabled";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -15,64 +16,37 @@ export default function Services() {
             <br></br>
             <ul className="service-lists">
               <li>
-                <a href="https://holyubofficial.net">Holy Unblocker</a>
-                <div>
-                  <a href="https://holyubofficial.net">❐</a>
-                </div>
+                <Service href="https://holyubofficial.net" source="https://github.com/holy-unblocker/website">Holy Unblocker</Service>
               </li>
               <li>
-                <a href="https://anura.pro/">Anura OS</a>
-                <div>
-                  <a href="https://anura.pro/">❐</a>
-                </div>
+                <Service href="https://example.com">Incognito</Service>
+              </li>
+			  <li>
+				<Service href="https://anura.pro" source="https://github.com/MercuryWorkshop/anuraOS">Anura OS</Service>
+			  </li>
+              <li>
+                <Service href="https://radon.games" source="https://github.com/Radon-Games/Radon-Games">Radon Games</Service>
+              </li>
+              <li title={disabled("nebula")}>
+                <Service href="https://nebulaproxy.io" source="https://github.com/NebulaServices/Nebula">Nebula Proxy</Service>
+              </li>
+			  <li>
+				<Service href="https://flow-works.me" source="https://github.com/Flow-Works/FlowOS">FlowOS</Service>
+			  </li>
+			  <li>
+				<Service href="https://kazwire.com" source="https://github.com/whos-evan/kazwire">Kazwire</Service>
+			  </li>
+              <li>
+                <Service href="https://terbium.ga" source="https://github.com/TerbiumOS/webOS">Terbium UX</Service>
               </li>
               <li>
-                <a href="https://radon.games">Radon Games</a>
-                <div>
-                  <a href="https://radon.games">❐</a>
-                </div>
+                <Service href="https://ludicrous.icu" source="https://github.com/titaniumnetwork-dev/Ludicrous">Ludicrous</Service>
               </li>
               <li>
-                <a href="https://nebulaproxy.io">Nebula Proxy</a>
-                <div>
-                  <a href="https://nebulaproxy.io">❐</a>
-                </div>
+				<Service href="https://totallyscience.co">Totally Science</Service>
               </li>
               <li>
-                <a href="https://flow-works.me/">FlowOS</a>
-                <div>
-                  <a href="https://flow-works.me/">❐</a>
-                </div>
-              </li>
-              <li>
-                <a href="https://kazwire.com/">Kazwire</a>
-                <div>
-                  <a href="https://kazwire.com/">❐</a>
-                </div>
-              </li>
-              <li>
-                <a href="https://terbium.ga/">Terbium UX</a>
-                <div>
-                  <a href="https://terbium.ga/">❐</a>
-                </div>
-              </li>
-              <li>
-                <a href="https://ludicrous.icu/">Ludicrous</a>
-                <div>
-                  <a href="https://ludicrous.icu/">❐</a>
-                </div>
-              </li>
-              <li>
-                <a href="https://totallyscience.co/">Totally Science</a>
-                <div>
-                  <a href="https://totallyscience.co/">❐</a>
-                </div>
-              </li>
-              <li>
-                <a href="https://github.com/BinBashBanana/webretro">webretro</a>
-                <div>
-                  <a href="https://github.com/BinBashBanana/webretro">❐</a>
-                </div>
+				<Service href="https://binbashbanana.github.io/webretro" source="https://github.com/BinBashBanana/webretro">webretro</Service>
               </li>
             </ul>
             <br></br>
@@ -88,4 +62,19 @@ export default function Services() {
       </div>
     </>
   );
+}
+
+
+function Service({ href, children, source } : { href: string, children: React.ReactNode, source?: string  }) {
+  return (
+    <>
+      <a href={href} target="_blank">{children}</a>
+      <div>
+        <a href={href} target="_blank">❐</a>
+      </div>
+      <div>
+      {source ? <a href={source} target="_blank">[Source]</a> : ""}
+      </div>
+    </>
+  )
 }

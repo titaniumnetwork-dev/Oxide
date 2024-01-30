@@ -1,6 +1,7 @@
-import React from "react";
+import { Metadata } from "next";
+import Link from "next/link";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Titanium Network",
 };
 
@@ -31,17 +32,18 @@ export default function Home() {
               improvement of web proxy technologies.
             </p>
             <div className="button-group">
-              <a
+              <Link
                 title="Wondering on how to unblock sites or self-host?"
                 className="button"
                 href="/setup"
               >
                 Get Started
-              </a>
+              </Link>
               <a
                 title="Look here for either contributing or hosting your own web proxy service using our various open-source projects!"
                 className="button button-right"
                 href="https://docs.titaniumnetwork.org"
+                target="_blank"
               >
                 Documentation
               </a>
