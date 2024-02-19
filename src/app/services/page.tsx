@@ -21,21 +21,21 @@ export default function Services() {
               <li>
                 <Service href="https://example.com">Incognito</Service>
               </li>
-			  <li>
-				<Service href="https://anura.pro" source="https://github.com/MercuryWorkshop/anuraOS">Anura OS</Service>
-			  </li>
+              <li>
+                <Service href="https://anura.pro" source="https://github.com/MercuryWorkshop/anuraOS">Anura OS</Service>
+              </li>
               <li>
                 <Service href="https://radon.games" source="https://github.com/Radon-Games/Radon-Games">Radon Games</Service>
               </li>
               <li title={disabled("nebula")}>
                 <Service href="https://nebulaproxy.io" source="https://github.com/NebulaServices/Nebula">Nebula Proxy</Service>
               </li>
-			  <li>
-				<Service href="https://flow-works.me" source="https://github.com/Flow-Works/FlowOS">FlowOS</Service>
-			  </li>
-			  <li>
-				<Service href="https://kazwire.com" source="https://github.com/whos-evan/kazwire">Kazwire</Service>
-			  </li>
+              <li>
+                <Service href="https://flow-works.me" source="https://github.com/Flow-Works/FlowOS">FlowOS</Service>
+              </li>
+              <li>
+                <Service href="https://kazwire.com" source="https://github.com/whos-evan/kazwire">Kazwire</Service>
+              </li>
               <li>
                 <Service href="https://terbium.ga" source="https://github.com/TerbiumOS/webOS">Terbium UX</Service>
               </li>
@@ -43,10 +43,10 @@ export default function Services() {
                 <Service href="https://ludicrous.icu" source="https://github.com/titaniumnetwork-dev/Ludicrous">Ludicrous</Service>
               </li>
               <li>
-				<Service href="https://totallyscience.co">Totally Science</Service>
+                <Service href="https://totallyscience.co">Totally Science</Service>
               </li>
               <li>
-				<Service href="https://binbashbanana.github.io/webretro" source="https://github.com/BinBashBanana/webretro">webretro</Service>
+                <Service href="https://binbashbanana.github.io/webretro" source="https://github.com/BinBashBanana/webretro">webretro</Service>
               </li>
             </ul>
             <br></br>
@@ -65,7 +65,7 @@ export default function Services() {
 }
 
 
-function Service({ href, children, source } : { href: string, children: React.ReactNode, source?: string  }) {
+function Service({ href, children, source }: { href: string, children: React.ReactNode, source?: string }) {
   return (
     <>
       <a href={href} target="_blank">{children}</a>
@@ -73,7 +73,7 @@ function Service({ href, children, source } : { href: string, children: React.Re
         <a href={href} target="_blank">❐</a>
       </div>
       <div>
-      {source ? <a href={source} target="_blank">[Source]</a> : ""}
+        {source ? <a href={source} target="_blank">[Source]</a> : ""}
       </div>
     </>
   )
