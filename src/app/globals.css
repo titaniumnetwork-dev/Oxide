@@ -17,16 +17,19 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.02);
   }
@@ -71,6 +74,7 @@ body {
 ::selection {
   background: #372551;
 }
+
 ::-moz-selection {
   background: #372551;
 }
@@ -111,7 +115,7 @@ body {
   cursor: pointer;
 }
 
-.sitetitle > a {
+.sitetitle>a {
   color: var(--text);
   text-decoration: none;
 }
@@ -132,7 +136,7 @@ body {
   overflow: hidden;
 }
 
-.navbar > li {
+.navbar>li {
   margin: 30px 0px;
   padding: 3px 20px;
   float: left;
@@ -140,7 +144,7 @@ body {
   cursor: pointer;
 }
 
-.navbar > li > a {
+.navbar>li>a {
   color: var(--text);
   font-size: 16px;
   font-family: "Raleway", sans-serif;
@@ -148,7 +152,7 @@ body {
   text-decoration: none;
 }
 
-.navbar > li > a:hover {
+.navbar>li>a:hover {
   animation: pulse 1s;
 }
 
@@ -191,7 +195,7 @@ body {
   padding: 30px;
 }
 
-.docs > p {
+.docs>p {
   color: #000;
 }
 
@@ -199,12 +203,12 @@ body {
   display: none;
 }
 
-.docs > h1,
+.docs>h1,
 h2 {
   margin-bottom: 20px;
 }
 
-.container > div > a {
+.container>div>a {
   font-size: 20px;
 }
 
@@ -267,26 +271,28 @@ h2 {
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
 }
 
-.service-lists > li > div {
+.service-lists>li>div {
   display: inline-block;
   padding-inline-start: 0.5em;
   margin-top: 5px;
 }
 
-.service-lists > li > div > a {
+.service-lists>li>div>a {
   text-decoration: none;
 }
 
-.service-lists > li > div:hover {
+.service-lists>li>div:hover {
   animation: pulse 0.3s;
 }
 
@@ -345,7 +351,7 @@ h2 {
     left: 30px;
   }
 
-  .button-group > .button {
+  .button-group>.button {
     display: block;
   }
 
