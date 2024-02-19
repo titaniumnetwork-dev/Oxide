@@ -1,54 +1,35 @@
 User-agent: Googlebot
 Allow: /
-Allow: /kajigs
+Allow: /setup
 Allow: /services
-Allow: /proxies
+Allow: /socials
 Allow: /guides
-Allow: /mercurywork
-Allow: /tomphttp
-
 User-agent: Bingbot
 Allow: /
-Allow: /kajigs
+Allow: /setup
 Allow: /services
-Allow: /proxies
-Allow: /guides
-Allow: /mercurywork
-Allow: /tomphttp
-
+Allow: /socials
 
 User-agent: Slurp
 Allow: /
-Allow: /kajigs
+Allow: /setup
 Allow: /services
-Allow: /proxies
-Allow: /guides
-Allow: /mercurywork
-Allow: /tomphttp
+Allow: /socials
 
 User-agent: DuckDuckBot
 Allow: /
-Allow: /kajigs
+Allow: /setup
 Allow: /services
-Allow: /proxies
-Allow: /guides
-Allow: /mercurywork
-Allow: /tomphttp
+Allow: /socials
 
 User-agent: Baiduspider
 Allow: /
-Allow: /kajigs
+Allow: /setup
 Allow: /services
-Allow: /proxies
-Allow: /guides
-Allow: /mercurywork
-Allow: /tomphttp
+Allow: /socials
 
 User-agent: YandexBot
 Allow: /
-Allow: /kajigs
+Allow: /setup
 Allow: /services
-Allow: /proxies
-Allow: /guides
-Allow: /mercurywork
-Allow: /tomphttp
+Allow: /socials

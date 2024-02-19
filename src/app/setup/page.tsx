@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Setup",
@@ -16,8 +17,8 @@ export default function Setup() {
               Titanium Network's services can be utlized either by hosting
               manually or using the officially hosted services. These servies
               such as Holy Unblocker or Incognito can be obtained in the{" "}
-              <a href="discord.gg/unblock">TN Discord</a> with a brief overview
-              on the <a href="/services">Services</a>.
+              <a href="https://discord.gg/unblock" target="_blank">TN Discord</a> with a brief overview
+              on the <Link href="/services">Services</Link>.
             </p>
             <br></br>
             <h3>Web Proxy Services</h3>
@@ -50,17 +51,11 @@ export default function Setup() {
               filter bypasses.
             </p>
             <br></br>
-            <p>
-              The most specialized part of Titanium Network would lastly be the
-              development of Bookmarklets which can be used to exploit either
-              extension bypasses to simply history flooding tools.
-            </p>
-            <br></br>
             <h3>Setup</h3>
             <br></br>
             <p>
               If you wish to setup any of Titanium Network's services please
-              check out <a href="https://docs.titaniumnetwork.org">here.</a>
+              check out <a href="https://docs.titaniumnetwork.org">the documentation.</a>
             </p>
           </div>
         </div>

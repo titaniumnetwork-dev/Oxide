@@ -1,19 +1,26 @@
-import { Metadata } from "next";
-import Nav from "./components/Nav";
+import { Metadata, Viewport } from "next";
+import Nav from "../components/Nav";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Next.js",
+  title: "Titanium Network",
   description:
     "The official site for Titanium Network, an organization dedicated to providing free access to information by innovating web proxy technologies and bypassing censorship.",
-  viewport: "width=device-width, initial-scale=1.0, shrink-to-fit=no",
-  themeColor: { media: "(prefers-color-scheme: dark)", color: "#434c5e" },
   keywords:
     "proxy, web proxy, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, holy unblocker, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked, Titanium Network, Hypertabs, Securly, iboss, Relay, Lightspeed, Unblock, Bypass, Chromebooks, Alloy Proxy",
   robots: "index, follow, snippet",
   icons: "/logo.png",
   manifest: "/manifest.json",
 };
+
+export const viewport: Viewport = {
+	width: "device-width",
+	initialScale: 1,
+	themeColor: {
+		media: "(prefers-color-scheme: dark)",
+		color: "#434c5e"
+	}
+}
 
 export default function RootLayout({
   children,

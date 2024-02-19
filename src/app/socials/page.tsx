@@ -15,66 +15,25 @@ export default function Socials() {
             <br></br>
             <ul className="service-lists">
               <li>
-                <a href="https://github.com/titaniumnetwork-dev">GitHub</a>
-                <div>
-                  <a href="https://github.com/titaniumnetwork-dev">
-                    <i className="fa-brands fa-github"></i>
-                  </a>
-                </div>
+				<Social url="https://github.com/titaniumnetwork-dev" css="github">GitHub</Social>
               </li>
               <li>
-                <a href="https://discord.gg/unblock">Discord</a>
-                <div>
-                  <a href="https://discord.gg/unblock">
-                    <i className="fa-brands fa-discord"></i>
-                  </a>
-                </div>
+				<Social url="https://discord.gg/unblock" css="discord">Discord</Social>
               </li>
               <li>
-                <a href="https://www.youtube.com/channel/UC6LaREFvs9L72SK1s2PcxNg">
-                  YouTube
-                </a>
-                <div>
-                  <a href="https://www.youtube.com/channel/UC6LaREFvs9L72SK1s2PcxNg">
-                    <i className="fa-brands fa-youtube"></i>
-                  </a>
-                </div>
+				<Social url="https://www.youtube.com/channel/UC6LaREFvs9L72SK1s2PcxNg" css="youtube">YouTube</Social>
               </li>
               <li>
-                <a href="https://twitter.com/TitaniumNetDev">Twitter</a>
-                <div>
-                  <a href="https://twitter.com/TitaniumNetDev">
-                    <i className="fa-brands fa-twitter"></i>
-                  </a>
-                </div>
+				<Social url="https://twitter.com/TitaniumNetDev" css="twitter">Twitter</Social>
               </li>
               <li>
-                <a href="https://www.tiktok.com/@tn_unblock">TikTok</a>
-                <div>
-                  <a href="https://www.tiktok.com/@tn_unblock">
-                    <i className="fa-brands fa-tiktok"></i>
-                  </a>
-                </div>
+				<Social url="https://www.tiktok.com/@tn_unblock" css="tiktok">TikTok</Social>
               </li>
               <li>
-                <a href="https://www.patreon.com/holyunblocker">
-                  Patreon (Holy Unblocker)
-                </a>
-                <div>
-                  <a href="https://www.patreon.com/holyunblocker">
-                    <i className="fa-brands fa-patreon"></i>
-                  </a>
-                </div>
+				<Social url="https://www.patreon.com/holyunblocker" css="patreon">Patreon (Holy Unblocker)</Social>
               </li>
               <li>
-                <a href="https://www.patreon.com/incognitotn">
-                  Patreon (Incognito)
-                </a>
-                <div>
-                  <a href="https://www.patreon.com/incognitotn">
-                    <i className="fa-brands fa-patreon"></i>
-                  </a>
-                </div>
+			    <Social url="https://www.patreon.com/incognitotn" css="patreon">Patreon (Incognito)</Social>
               </li>
             </ul>
           </div>
@@ -82,4 +41,17 @@ export default function Socials() {
       </div>
     </>
   );
+}
+
+function Social({ url, css, children } : { url: string, css: string, children: React.ReactNode }) {
+	return (
+		<>
+		    <a href={url} target="_blank">{children}</a>
+            <div>
+                <a href={url}>
+                	<i className={`fa-brands fa-${css}`}></i>
+                </a>
+            </div>
+		</>
+	)
 }

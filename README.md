@@ -8,7 +8,7 @@
 
 Titanium Network is an organization dedicated to providing services related to bypassing internet censorship. Our projects expect to provide users, and itself, with a less restrictive browsing experience. For this TN prioritizes the production and improvement of web proxy technologies.
 
-#### Purpose/Features
+#### Features
 
 - Link to [Oxide-Docs](https://github.com/titaniumnetwork-dev/Oxide-Docs)
 - Setup page which provides instructions on how to use a web proxy service or Kajigs
@@ -17,13 +17,13 @@ Titanium Network is an organization dedicated to providing services related to b
 
 #### Setup
 
-Make sure to have both Node.js and npm installed.
+Make sure to have both Node.js and yarn installed.
 
 ```bash
 git clone https://github.com/titaniumnetwork-dev/Oxide.git
 cd Oxide
-npm install
-npm run dev
+yarn
+yarn dev
 ```
 
 A browser tab will automatically open to `localhost:3000` (the default port).
@@ -31,8 +31,8 @@ A browser tab will automatically open to `localhost:3000` (the default port).
 For production, use the the commands:
 
 ```bash
-npm run build
-npm start
+yarn build
+yarn start
 ```
 
 #### Contributors
