@@ -1,9 +1,9 @@
 # Oxide <img align="right" width="200px" src="https://raw.githubusercontent.com/titaniumnetwork-dev/Oxide/master/public/logo.png?raw"></img>
 
 ### The official site for Titanium Network.
-Looking for our [documentation site?](https://github.com/titaniumnetwork-dev/Oxide-Docs)
+##### Looking for our [documentation site?](https://github.com/titaniumnetwork-dev/Oxide-Docs)
 
-[Join our Discord!](https://discord.gg/unblock)
+ [Join our Discord!](https://discord.gg/unblock)
 
 #### Overview
 
