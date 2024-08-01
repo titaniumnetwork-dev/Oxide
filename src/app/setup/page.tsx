@@ -29,7 +29,7 @@ export default function Setup() {
             </p>
             <br></br>
             <p>
-              Example Mirror/URL: <code>https://holyubofficial.net</code>
+              Example Mirror/URL: <code>https://holyunblocker.org</code>
             </p>
             <br></br>
             <p>
