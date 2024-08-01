@@ -16,10 +16,10 @@ export default function Services() {
             <br></br>
             <ul className="service-lists">
               <li>
-                <Service href="https://holyubofficial.net" source="https://github.com/holy-unblocker/website">Holy Unblocker</Service>
+                <Service href="https://holyunblocker.org" source="https://github.com/QuiteAFancyEmerald/Holy-Unblocker/">Holy Unblocker LTS</Service>
               </li>
               <li>
-                <Service href="https://example.com">Incognito</Service>
+                <Service href="https://aluu.xyz">Alu</Service>
               </li>
               <li>
                 <Service href="https://anura.pro" source="https://github.com/MercuryWorkshop/anuraOS">Anura OS</Service>
@@ -31,19 +31,22 @@ export default function Services() {
                 <Service href="https://nebulaproxy.io" source="https://github.com/NebulaServices/Nebula">Nebula Proxy</Service>
               </li>
               <li>
-                <Service href="https://flow-works.me" source="https://github.com/Flow-Works/FlowOS">FlowOS</Service>
+                <Service href="https://definitelyscience.com" source="https://github.com/titaniumnetwork-dev/Definitely-Science">Definitely Science</Service>
               </li>
               <li>
                 <Service href="https://kazwire.com" source="https://github.com/whos-evan/kazwire">Kazwire</Service>
               </li>
               <li>
-                <Service href="https://terbium.ga" source="https://github.com/TerbiumOS/webOS">Terbium UX</Service>
+                <Service href="https://anura.pro" source="https://github.com/MercuryWorkshop/anuraOS">AnuraOS</Service>
               </li>
               <li>
                 <Service href="https://ludicrous.icu" source="https://github.com/titaniumnetwork-dev/Ludicrous">Ludicrous</Service>
               </li>
               <li>
                 <Service href="https://totallyscience.co">Totally Science</Service>
+              </li>
+              <li>
+                <Service href="https://incog.works">Incognito</Service>
               </li>
               <li>
                 <Service href="https://binbashbanana.github.io/webretro" source="https://github.com/BinBashBanana/webretro">webretro</Service>
