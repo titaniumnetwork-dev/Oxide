@@ -29,12 +29,6 @@ export default function Socials() {
               <li>
 				<Social url="https://www.tiktok.com/@tn_unblock" css="tiktok">TikTok</Social>
               </li>
-              <li>
-				<Social url="https://www.patreon.com/holyunblocker" css="patreon">Patreon (Holy Unblocker)</Social>
-              </li>
-              <li>
-			    <Social url="https://www.patreon.com/incognitotn" css="patreon">Patreon (Incognito)</Social>
-              </li>
             </ul>
           </div>
         </div>
