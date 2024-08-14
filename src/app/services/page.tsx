@@ -51,6 +51,9 @@ export default function Services() {
               <li>
                 <Service href="https://binbashbanana.github.io/webretro" source="https://github.com/BinBashBanana/webretro">webretro</Service>
               </li>
+              <li>
+                <Service href="https://nano-proxy.github.io" source="https://github.com/titaniumnetwork-dev/nano">nano.</Service>
+              </li>
             </ul>
             <br></br>
             <h3 id="web-proxy-services">Community Proxy Services</h3>
