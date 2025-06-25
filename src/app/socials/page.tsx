@@ -15,19 +15,22 @@ export default function Socials() {
             <br></br>
             <ul className="service-lists">
               <li>
-				<Social url="https://github.com/titaniumnetwork-dev" css="github">GitHub</Social>
+				      <Social url="https://github.com/titaniumnetwork-dev" css="github">GitHub</Social>
               </li>
               <li>
-				<Social url="https://discord.gg/unblock" css="discord">Discord</Social>
+				      <Social url="https://discord.gg/unblock" css="discord">Discord</Social>
               </li>
               <li>
-				<Social url="https://www.youtube.com/channel/UC6LaREFvs9L72SK1s2PcxNg" css="youtube">YouTube</Social>
+                <Social url="https://www.instagram.com/titaniumnetworkofficial_" css="instagram">Instagram</Social>
               </li>
               <li>
-				<Social url="https://twitter.com/TitaniumNetDev" css="twitter">Twitter</Social>
+              <Social url="https://www.youtube.com/channel/UC6LaREFvs9L72SK1s2PcxNg" css="youtube">YouTube</Social>
               </li>
               <li>
-				<Social url="https://www.tiktok.com/@tn_unblock" css="tiktok">TikTok</Social>
+              <Social url="https://twitter.com/TitaniumNetDev" css="twitter">Twitter</Social>
+              </li>
+              <li>
+              <Social url="https://www.tiktok.com/@tn_unblock" css="tiktok">TikTok</Social>
               </li>
             </ul>
           </div>

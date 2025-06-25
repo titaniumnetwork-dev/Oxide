@@ -19,49 +19,37 @@ export default function Services() {
                 <Service href="https://holyunblocker.org" source="https://github.com/QuiteAFancyEmerald/Holy-Unblocker/">Holy Unblocker LTS</Service>
               </li>
               <li>
-                <Service href="https://aluu.xyz">Alu</Service>
+                <Service href="https://anura.pro" source="https://github.com/MercuryWorkshop/anuraOS">AnuraOS</Service>
               </li>
               <li>
-                <Service href="https://anura.pro" source="https://github.com/MercuryWorkshop/anuraOS">Anura OS</Service>
+                <Service href="https://terbiumon.top" source="https://github.com/TerbiumOS/web-v2">Terbium</Service>
               </li>
               <li>
-                <Service href="https://radon.games" source="https://github.com/Radon-Games/Radon-Games">Radon Games</Service>
-              </li>
-              <li title={disabled("nebula")}>
-                <Service href="https://nebulaproxy.io" source="https://github.com/NebulaServices/Nebula">Nebula Proxy</Service>
+                <Service href="https://aluu.xyz" source="https://github.com/titaniumnetwork-dev/Pyrus">Alu</Service>
               </li>
               <li>
                 <Service href="https://definitelyscience.com" source="https://github.com/titaniumnetwork-dev/Definitely-Science">Definitely Science</Service>
               </li>
               <li>
+                <Service href="https://incog.works" source="https://github.com/MotorTruck1221/Incognito">Incognito</Service>
+              </li>
+              <li>
+                <Service href="https://radon.games" source="https://github.com/Radon-Games/Radon-Games">Radon Games</Service>
+              </li>
+              <li>
                 <Service href="https://kazwire.com" source="https://github.com/whos-evan/kazwire">Kazwire</Service>
               </li>
               <li>
-                <Service href="https://anura.pro" source="https://github.com/MercuryWorkshop/anuraOS">AnuraOS</Service>
+                <Service href="https://nebulaservices.org" source="https://github.com/NebulaServices/Nebula">Nebula</Service>
               </li>
               <li>
-                <Service href="https://ludicrous.icu" source="https://github.com/titaniumnetwork-dev/Ludicrous">Ludicrous</Service>
-              </li>
-              <li>
-                <Service href="https://totallyscience.co">Totally Science</Service>
-              </li>
-              <li>
-                <Service href="https://incog.works">Incognito</Service>
-              </li>
-              <li>
-                <Service href="https://binbashbanana.github.io/webretro" source="https://github.com/BinBashBanana/webretro">webretro</Service>
-              </li>
-              <li>
-                <Service href="https://nano-proxy.github.io" source="https://github.com/titaniumnetwork-dev/nano">nano.</Service>
+                <Service href="https://radiusproxy.app" source="https://github.com/unretain/Radius2">Radius</Service>
               </li>
             </ul>
             <br></br>
             <h3 id="web-proxy-services">Community Proxy Services</h3>
             <br></br>
             <ul className="service-lists">
-              <li>Astral (Lucid)</li>
-              <li>SealCentral</li>
-              <li>Abyss</li>
             </ul>
           </div>
         </div>
