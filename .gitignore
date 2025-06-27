@@ -14,7 +14,7 @@
 
 # production
 /build
-
+/public/.well-known
 # misc
 .DS_Store
 *.pem
