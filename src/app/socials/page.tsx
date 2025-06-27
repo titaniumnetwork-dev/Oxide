@@ -29,14 +29,6 @@ export default function Socials() {
 							</li>
 							<li>
 								<Social
-									url="https://www.instagram.com/titaniumnetworkofficial_"
-									css="instagram"
-								>
-									Instagram
-								</Social>
-							</li>
-							<li>
-								<Social
 									url="https://www.youtube.com/channel/UC6LaREFvs9L72SK1s2PcxNg"
 									css="youtube"
 								>
@@ -44,8 +36,21 @@ export default function Socials() {
 								</Social>
 							</li>
 							<li>
+								<Social url="https://bsky.app/profile/titaniumnetwork.org" css="bluesky">
+									Bluesky
+								</Social>
+							</li>
+							<li>
 								<Social url="https://twitter.com/TitaniumNetDev" css="twitter">
 									Twitter
+								</Social>
+							</li>
+							<li>
+								<Social
+									url="https://www.instagram.com/titaniumnetworkofficial_"
+									css="instagram"
+								>
+									Instagram
 								</Social>
 							</li>
 							<li>
