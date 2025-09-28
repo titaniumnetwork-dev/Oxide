@@ -16,11 +16,6 @@ export default function Nav() {
 				<li>
 					<Link href="/services">Services</Link>
 				</li>
-				{/* 
-				<li>
-					<a href="#">Kajigs</a>
-				</li>
-				*/}
 				<li>
 					<Link href="/socials">Socials</Link>
 				</li>

@@ -41,10 +41,14 @@ export default function RootLayout({
 							logo: "https://titaniumnetwork.org/logo.png",
 							alternateName: "TitaniumNetworkDevelopment",
 							sameAs: [
-								"https://www.youtube.com/channel/UC6LaREFvs9L72SK1s2PcxNg",
 								"https://github.com/titaniumnetwork-dev",
-								"https://twitter.com/TitaniumNetDev",
-								"https://www.tiktok.com/@tn_unblock",
+								"https://discord.gg/unblock",
+								"https://www.youtube.com/channel/UC6LaREFvs9L72SK1s2PcxNg",
+								"https://x.com/TitaniumNetDev",
+								"https://bsky.app/profile/titaniumnetwork.org",
+								"https://www.instagram.com/titaniumnetworkofficial_",
+								"https://www.tiktok.com/@titaniumnetwork.org",
+								"https://reddit.com/r/TitaniumNetwork",
 							],
 						}),
 					}}

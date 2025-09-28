@@ -87,14 +87,6 @@ export default function Services() {
 									Nebula
 								</Service>
 							</li>
-							<li>
-								<Service
-									href="https://radiusproxy.app"
-									source="https://github.com/unretain/Radius2"
-								>
-									Radius
-								</Service>
-							</li>
 						</ul>
 						<br></br>
 						<h3 id="web-proxy-services">Community Proxy Services</h3>

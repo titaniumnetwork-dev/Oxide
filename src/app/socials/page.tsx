@@ -41,7 +41,10 @@ export default function Socials() {
 								</Social>
 							</li>
 							<li>
-								<Social url="https://bsky.app/profile/titaniumnetwork.org" css="bluesky">
+								<Social
+									url="https://bsky.app/profile/titaniumnetwork.org"
+									css="bluesky"
+								>
 									Bluesky
 								</Social>
 							</li>
@@ -54,7 +57,10 @@ export default function Socials() {
 								</Social>
 							</li>
 							<li>
-								<Social url="https://www.tiktok.com/@titaniumnetwork.org" css="tiktok">
+								<Social
+									url="https://www.tiktok.com/@titaniumnetwork.org"
+									css="tiktok"
+								>
 									TikTok
 								</Social>
 							</li>
