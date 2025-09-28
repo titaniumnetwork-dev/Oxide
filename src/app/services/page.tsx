@@ -41,22 +41,6 @@ export default function Services() {
 							</li>
 							<li>
 								<Service
-									href="https://aluu.xyz"
-									source="https://github.com/titaniumnetwork-dev/Pyrus"
-								>
-									Alu
-								</Service>
-							</li>
-							<li>
-								<Service
-									href="https://definitelyscience.com"
-									source="https://github.com/titaniumnetwork-dev/Definitely-Science"
-								>
-									Definitely Science
-								</Service>
-							</li>
-							<li>
-								<Service
 									href="https://incog.works"
 									source="https://github.com/MotorTruck1221/Incognito"
 								>
@@ -73,18 +57,26 @@ export default function Services() {
 							</li>
 							<li>
 								<Service
-									href="https://kazwire.com"
-									source="https://github.com/whos-evan/kazwire"
-								>
-									Kazwire
-								</Service>
-							</li>
-							<li>
-								<Service
 									href="https://nebulaservices.org"
 									source="https://github.com/NebulaServices/Nebula"
 								>
 									Nebula
+								</Service>
+							</li>
+							<li>
+								<Service
+									href="https://definitelyscience.com"
+									source="https://github.com/titaniumnetwork-dev/Definitely-Science"
+								>
+									Definitely Science
+								</Service>
+							</li>
+							<li>
+								<Service
+									href="https://kazwire.com"
+									source="https://github.com/whos-evan/kazwire"
+								>
+									Kazwire
 								</Service>
 							</li>
 						</ul>
