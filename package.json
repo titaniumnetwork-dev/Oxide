@@ -9,6 +9,9 @@
     "format": "prettier --config .prettierrc.js --write ./src/",
     "lint": "next lint"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "devDependencies": {
     "@types/node": "^24.0.4",
     "@types/react": "^19.1.8",
