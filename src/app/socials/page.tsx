@@ -50,7 +50,7 @@ export default function Socials() {
 							</li>
 							<li>
 								<Social
-									url="https://www.instagram.com/titaniumnetworkofficial_"
+									url="https://www.instagram.com/titaniumnetworkdotorg"
 									css="instagram"
 								>
 									Instagram
