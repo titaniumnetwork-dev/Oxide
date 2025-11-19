@@ -79,6 +79,14 @@ export default function Services() {
 									Kazwire
 								</Service>
 							</li>
+							<li>
+								<Service
+									href="https://fern.best"
+									source="https://github.com/genericness/fern-foss"
+								>
+									Fern
+								</Service>
+							</li>
 						</ul>
 						<br></br>
 						<h3 id="web-proxy-services">Community Proxy Services</h3>
