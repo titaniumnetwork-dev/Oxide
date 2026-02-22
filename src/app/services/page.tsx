@@ -11,9 +11,10 @@ export default function Services() {
 			<div className="background"></div>
 			<div className="content">
 				<div className="docs">
+					<h2 id="web-proxy-services">Web Proxy Services</h2>
 					<div data-aos="fade-right">
-						<h2 id="web-proxy-services">Web Proxy Services</h2>
-						<br></br>
+						<h3 id="web-proxy-services">Browsing</h3>
+						<br />
 						<ul className="service-lists">
 							<li>
 								<Service
@@ -23,6 +24,35 @@ export default function Services() {
 									Holy Unblocker LTS
 								</Service>
 							</li>
+							<li>
+								<Service
+									href="https://nebulaservices.org"
+									source="https://github.com/NebulaServices/Nebula"
+								>
+									Nebula
+								</Service>
+							</li>
+							<li>
+								<Service
+									href="https://incog.works"
+									source="https://github.com/MotorTruck1221/Incognito"
+								>
+									Incognito
+								</Service>
+							</li>
+							<li>
+								<Service
+									href="https://radon.games"
+									source="https://github.com/Radon-Games/Radon-Games"
+								>
+									DayDreamX
+								</Service>
+							</li>
+						</ul>
+						<br />
+						<h3 id="web-proxy-services">WebOS</h3>
+						<br />
+						<ul className="service-lists">
 							<li>
 								<Service
 									href="https://anura.pro"
@@ -39,36 +69,25 @@ export default function Services() {
 									Terbium
 								</Service>
 							</li>
+						</ul>
+						<br />
+						<h3 id="web-proxy-services">Unblocked Games</h3>
+						<br />
+						<ul className="service-lists">
 							<li>
 								<Service
-									href="https://incog.works"
-									source="https://github.com/MotorTruck1221/Incognito"
+									href="https://truffled.lol"
+									source="https://github.com/aukak/truffled"
 								>
-									Incognito
+									Truffled
 								</Service>
 							</li>
 							<li>
 								<Service
-									href="https://radon.games"
-									source="https://github.com/Radon-Games/Radon-Games"
+									href="https://gointospace.app"
+									source="https://gitlab.com/nightnetwork/Space"
 								>
-									Radon Games
-								</Service>
-							</li>
-							<li>
-								<Service
-									href="https://nebulaservices.org"
-									source="https://github.com/NebulaServices/Nebula"
-								>
-									Nebula
-								</Service>
-							</li>
-							<li>
-								<Service
-									href="https://definitelyscience.com"
-									source="https://github.com/titaniumnetwork-dev/Definitely-Science"
-								>
-									Definitely Science
+									Space
 								</Service>
 							</li>
 							<li>
@@ -79,11 +98,15 @@ export default function Services() {
 									Kazwire
 								</Service>
 							</li>
+							<li>
+								<Service
+									href="https://definitelyscience.com"
+									source="https://github.com/titaniumnetwork-dev/Definitely-Science"
+								>
+									Definitely Science
+								</Service>
+							</li>
 						</ul>
-						<br></br>
-						<h3 id="web-proxy-services">Community Proxy Services</h3>
-						<br></br>
-						<ul className="service-lists"></ul>
 					</div>
 				</div>
 			</div>
