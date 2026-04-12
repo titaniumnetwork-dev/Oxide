@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 	description:
 		"The official site for Titanium Network, an organization dedicated to providing free access to information by innovating web proxy technologies and bypassing censorship.",
 	keywords:
-		"proxy, web proxy, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, holy unblocker, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked, Titanium Network, Hypertabs, Securly, iboss, Relay, Lightspeed, Unblock, Bypass, Chromebooks, Alloy Proxy",
+		"proxy, web proxy, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, InvisiProxy, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked, Titanium Network, Hypertabs, Securly, iboss, Relay, Lightspeed, Unblock, Bypass, Chromebooks, Alloy Proxy",
 	robots: "index, follow, snippet",
 	icons: "/logo.png",
 	manifest: "/manifest.json",
@@ -89,15 +89,15 @@ export default function RootLayout({
 									name: "How do I unblock websites at school?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "Using Titanium Network's various services such as Holy Unblocker, a free web proxy service with frequent updates and domain restocks, you can unblock sites at school! If a Holy Unblocker site gets blocked simply join the TN Discord to request for a newer site. Restocks occur monthly to prevent mass blocking.",
+										text: "Using Titanium Network's various services such as InvisiProxy, a free web proxy service with frequent updates and domain restocks, you can unblock sites at school! If a InvisiProxy site gets blocked simply join the TN Discord to request for a newer site. Restocks occur monthly to prevent mass blocking.",
 									},
 								},
 								{
 									"@type": "Question",
-									name: "What sites can I unblock with Holy Unblocker?",
+									name: "What sites can I unblock with InvisiProxy?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "With Holy Unblocker you can access sites such as Discord, Spotify, YouTube and other game sites!",
+										text: "With InvisiProxy you can access sites such as Discord, Spotify, YouTube and other game sites!",
 									},
 								},
 								{
@@ -110,7 +110,7 @@ export default function RootLayout({
 								},
 								{
 									"@type": "Question",
-									name: "Does Holy Unblocker hide my search history?",
+									name: "Does InvisiProxy hide my search history?",
 									acceptedAnswer: {
 										"@type": "Answer",
 										text: "Yes! Change your Tab appearance via Settings > Tab Cloak and use Stealth mode when browsing.",
@@ -134,10 +134,10 @@ export default function RootLayout({
 								},
 								{
 									"@type": "Question",
-									name: "Is Holy Unblocker open-source?",
+									name: "Is InvisiProxy open-source?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "Yes! Check out our GitHub where you can deploy or host your own instance of Holy Unblocker.",
+										text: "Yes! Check out our GitHub where you can deploy or host your own instance of InvisiProxy.",
 									},
 								},
 							],

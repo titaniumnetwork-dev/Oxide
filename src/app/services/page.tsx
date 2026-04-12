@@ -18,10 +18,10 @@ export default function Services() {
 						<ul className="service-lists">
 							<li>
 								<Service
-									href="https://holyunblocker.org"
-									source="https://github.com/QuiteAFancyEmerald/Holy-Unblocker/"
+									href="https://invisiproxy.com"
+									source="https://github.com/QuiteAFancyEmerald/InvisiProxy/"
 								>
-									Holy Unblocker LTS
+									InvisiProxy LTS
 								</Service>
 							</li>
 							<li>

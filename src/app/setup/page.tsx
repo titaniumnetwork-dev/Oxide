@@ -16,7 +16,7 @@ export default function Setup() {
 						<p>
 							Titanium Network's services can be utlized either by hosting
 							manually or using the officially hosted services. These servies
-							such as Holy Unblocker or Incognito can be obtained in the{" "}
+							such as InvisiProxy or AnuraOS can be obtained in the{" "}
 							<a href="https://discord.gg/unblock" target="_blank">
 								TN Discord
 							</a>{" "}
@@ -32,7 +32,7 @@ export default function Setup() {
 						</p>
 						<br></br>
 						<p>
-							Example Mirror/URL: <code>https://holyunblocker.org</code>
+							Example Mirror/URL: <code>https://invisiproxy.com</code>
 						</p>
 						<br></br>
 						<p>

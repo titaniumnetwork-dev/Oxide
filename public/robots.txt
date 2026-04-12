@@ -33,3 +33,5 @@ Allow: /
 Allow: /setup
 Allow: /services
 Allow: /socials
+
+Sitemap: https://titaniumnetwork.org/sitemap.xml
