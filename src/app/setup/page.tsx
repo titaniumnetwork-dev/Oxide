@@ -14,7 +14,7 @@ export default function Setup() {
 					<div data-aos="fade-right">
 						<h1 id="usage">Usage</h1>
 						<p>
-							Titanium Network's services can be utlized either by hosting
+							TitaniumNetwork's services can be utilized either by hosting
 							manually or using the officially hosted services. These servies
 							such as InvisiProxy or AnuraOS can be obtained in the{" "}
 							<a href="https://discord.gg/unblock" target="_blank">
@@ -27,7 +27,7 @@ export default function Setup() {
 						<h3>Web Proxy Services</h3>
 						<p>
 							In order to use a web proxy site, you would simply obtain any of
-							our official domains (URLS/mirrors) from the Titanium Network
+							our official domains (URLs/mirrors) from the TitaniumNetwork
 							discord.
 						</p>
 						<br></br>
@@ -44,7 +44,7 @@ export default function Setup() {
 						<h3>Kajigs</h3>
 						<p>
 							A repository of methods/exploits (found in the TN discord)
-							maintained by Titanium Network you can employ enabling you to
+							maintained by TitaniumNetwork you can employ enabling you to
 							bypass restrictions!
 						</p>
 						<br></br>
@@ -57,7 +57,7 @@ export default function Setup() {
 						<h3>Setup</h3>
 						<br></br>
 						<p>
-							If you wish to setup any of Titanium Network's services please
+							If you wish to setup any of TitaniumNetwork's services please
 							check out{" "}
 							<a href="https://docs.titaniumnetwork.org">the documentation.</a>
 						</p>

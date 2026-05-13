@@ -4,7 +4,7 @@ export default function Nav() {
 	return (
 		<nav className="header">
 			<div className="sitetitle">
-				<Link href="/">Titanium Network</Link>
+				<Link href="/">TitaniumNetwork</Link>
 			</div>
 			<div className="responsive">
 				<i className="fa-solid fa-bars"></i>

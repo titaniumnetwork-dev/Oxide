@@ -12,7 +12,7 @@ export default function NotFound() {
 			<div className="content">
 				<div className="container">
 					<div data-aos="fade-right">
-						<p className="header-text">{disabled("Titanium Network")}</p>
+						<p className="header-text">{disabled("TitaniumNetwork")}</p>
 						<p>404: Page not found</p>
 					</div>
 				</div>

@@ -3,11 +3,11 @@ import Nav from "../components/Nav";
 import "./globals.css";
 
 export const metadata: Metadata = {
-	title: "Titanium Network",
+	title: "TitaniumNetwork",
 	description:
-		"The official site for Titanium Network, an organization dedicated to providing free access to information by innovating web proxy technologies and bypassing censorship.",
+		"The official site for TitaniumNetwork, an organization dedicated to providing free access to information by innovating web proxy technologies and bypassing censorship.",
 	keywords:
-		"proxy, web proxy, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, InvisiProxy, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked, Titanium Network, Hypertabs, Securly, iboss, Relay, Lightspeed, Unblock, Bypass, Chromebooks, Alloy Proxy",
+		"proxy, web proxy, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, InvisiProxy, chromebooks, titaniumnetwork, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked, Titanium Network, Hypertabs, Securly, iboss, Relay, Lightspeed, Unblock, Bypass, Chromebooks, Alloy Proxy",
 	robots: "index, follow, snippet",
 	icons: "/logo.png",
 	manifest: "/manifest.json",
@@ -36,7 +36,7 @@ export default function RootLayout({
 						__html: JSON.stringify({
 							"@context": "https://schema.org",
 							"@type": "Organization",
-							name: "Titanium Network",
+							name: "TitaniumNetwork",
 							url: "https://titaniumnetwork.org",
 							logo: "https://titaniumnetwork.org/logo.png",
 							alternateName: "TitaniumNetworkDevelopment",
@@ -62,15 +62,15 @@ export default function RootLayout({
 							mainEntity: [
 								{
 									"@type": "Question",
-									name: "What is Titanium Network?",
+									name: "What is TitaniumNetwork?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "Titanium Network is an organization dedicated to providing services related to bypassing internet censorship. Our projects expect to provide users, and itself, with a less restrictive browsing experience. For this TN prioritizes the production and improvement of web proxy technologies.",
+										text: "TitaniumNetwork is an organization dedicated to providing services related to bypassing internet censorship. Our projects provide users with a less restrictive browsing experience. For this TN prioritizes the production and improvement of web proxy technologies.",
 									},
 								},
 								{
 									"@type": "Question",
-									name: "Can I use Titanium Network to evade website blocks?",
+									name: "Can I use TitaniumNetwork to evade website blocks?",
 									acceptedAnswer: {
 										"@type": "Answer",
 										text: "Of course, whether it's at your school, or in the workplace, our robust proxies allow you to bypass web filters, including iBoss, Cisco, and more.",
@@ -78,7 +78,7 @@ export default function RootLayout({
 								},
 								{
 									"@type": "Question",
-									name: "Does Titanium Network help protect my online privacy?",
+									name: "Does TitaniumNetwork help protect my online privacy?",
 									acceptedAnswer: {
 										"@type": "Answer",
 										text: "Yes! Just like a VPN, TN hides your IP address, and also prevents site data from being stored locally in an identifiable manner.",
@@ -89,7 +89,7 @@ export default function RootLayout({
 									name: "How do I unblock websites at school?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: "Using Titanium Network's various services such as InvisiProxy, a free web proxy service with frequent updates and domain restocks, you can unblock sites at school! If a InvisiProxy site gets blocked simply join the TN Discord to request for a newer site. Restocks occur monthly to prevent mass blocking.",
+										text: "Using TitaniumNetwork's various services such as InvisiProxy, a free web proxy service with frequent updates and domain restocks, you can unblock sites at school! If a InvisiProxy site gets blocked simply join the TN Discord to request for a newer site. Restocks occur monthly to prevent mass blocking.",
 									},
 								},
 								{
@@ -118,7 +118,7 @@ export default function RootLayout({
 								},
 								{
 									"@type": "Question",
-									name: "What is the main project Titanium Network has worked on with web proxy technologies?",
+									name: "What is the main project TitaniumNetwork has worked on with web proxy technologies?",
 									acceptedAnswer: {
 										"@type": "Answer",
 										text: "Ultraviolet, a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers and more!",
@@ -129,7 +129,7 @@ export default function RootLayout({
 									name: "Where can I obtain more proxy sites?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: 'Be sure to join the Titanium Network discord at discord.gg/unblock! Then simply type "/proxy" in our bots channel for a site to be sent to you via DMs using our bot.',
+										text: 'Be sure to join the TitaniumNetwork discord at discord.gg/unblock! Then simply type "/proxy" in our bots channel for a site to be sent to you via DMs using our bot.',
 									},
 								},
 								{

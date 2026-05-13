@@ -1,18 +1,20 @@
-# Oxide <img align="right" width="200px" src="https://raw.githubusercontent.com/titaniumnetwork-dev/Oxide/master/public/logo.png?raw"></img>
+# Oxide
 
-### The official community site for Titanium Network.
+### The official community site for TitaniumNetwork
 
-##### Looking for our [documentation site?](https://github.com/titaniumnetwork-dev/Oxide-Docs)
+##### Looking for our [documentation site](https://github.com/titaniumnetwork-dev/Oxide-Docs)?
 
 [Join our Discord!](https://discord.gg/unblock)
 
+## TODO: This website needs a complete redesign!
+
 #### Overview
 
-Titanium Network is an organization dedicated to providing services related to bypassing internet censorship. Our projects expect to provide users, and itself, with a less restrictive browsing experience. For this TN prioritizes the production and improvement of web proxy technologies.
+TitaniumNetwork is an organization dedicated to providing services related to bypassing internet censorship. Our projects provide users with a less restrictive browsing experience. For this TN prioritizes the production and improvement of web proxy technologies.
 
-#### Why Titanium Network?
+#### Why TitaniumNetwork?
 
-- A massive proxy and bypass community (sub 30k), home to some of the best proxies online
+- A massive proxy and bypass community (~30k members), home to some of the best proxies online
 - Utilize our "Kajig" bypass methods for an even smoother bypass experience
 
 #### Local Setup
@@ -39,7 +41,7 @@ However, it is simpler to use a reverse proxy that serves the static files gener
 
 #### Contributors
 
-[titaniumnetwork.org](https://titaniumnetwork.org)'s site content is currently being hosted and maintained by the Titanium Network team. [Contact us](https://discord.gg/unblock) for any concerns.
+[titaniumnetwork.org](https://titaniumnetwork.org)'s site content is currently being hosted and maintained by the TitaniumNetwork team. [Contact us](https://discord.gg/unblock) for any concerns.
 
 A general list for any contributors. If you make a contribution add yourself here!
 
@@ -48,4 +50,4 @@ A general list for any contributors. If you make a contribution add yourself her
 - sexyduceduce
 - mdoryammilwalrus
 
-If you wish to support Titanium Network please check out our Discord!
+If you wish to support TitaniumNetwork please check out our Discord!
