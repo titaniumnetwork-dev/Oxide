@@ -129,7 +129,7 @@ export default function RootLayout({
 									name: "Where can I obtain more proxy sites?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: 'Be sure to join the TitaniumNetwork discord at discord.gg/unblock! Then simply type "/proxy" in our bots channel for a site to be sent to you via DMs using our bot.',
+										text: 'Be sure to join the TitaniumNetwork discord at discord.gg/unblock! Then simply use the bot in #panel to get a new link.',
 									},
 								},
 								{
