@@ -12,7 +12,7 @@ export default function Home() {
 			<section className="content-frame min-h-[calc(100vh-11.5rem)] grid place-items-center pt-6 pb-8">
 				<FadeIn className="w-full text-center">
 					<h1 className="mx-auto text-balance text-[clamp(2.4rem,7.4vw,5.4rem)] leading-[0.92] tracking-[-0.03em] text-white">
-						Titanium Network
+						TitaniumNetwork
 					</h1>
 					<p className="mx-auto mt-6 max-w-[52ch] text-[clamp(1.02rem,1.9vw,1.34rem)] leading-relaxed text-white/78">
 						Services for a less restrictive web experience, built with a focus on
