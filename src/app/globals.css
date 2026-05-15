@@ -96,26 +96,6 @@ code {
 	border-color: var(--line-strong);
 }
 
-.brand-icon-btn {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 2rem;
-	height: 2rem;
-	border: 1px solid transparent;
-	border-radius: 999px;
-	color: var(--muted);
-	font-size: 0.85rem;
-	transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-}
-
-.brand-icon-btn:hover,
-.brand-icon-btn:focus-visible {
-	color: var(--text);
-	border-color: var(--line);
-	background: rgba(255, 255, 255, 0.04);
-}
-
 .content-frame {
 	position: relative;
 	border-radius: 16px;
@@ -183,47 +163,6 @@ code {
 	font-size: clamp(1.32rem, 2.9vw, 1.95rem);
 	margin-top: 0.75rem;
 	font-weight: 500;
-}
-
-.cta-hot,
-.cta-cool {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	border: 0;
-	border-radius: 12px;
-	padding: 0 1rem;
-	color: #fff;
-	font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 2.5;
-	white-space: nowrap;
-	transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.cta-hot {
-	background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
-}
-
-.cta-hot:hover,
-.cta-hot:focus-visible {
-	box-shadow:
-		0 0 0.25rem rgba(0, 0, 0, 0.5),
-		-0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.45),
-		0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.45);
-}
-
-.cta-cool {
-	background: linear-gradient(to bottom right, rgba(239, 71, 101, 0.56), rgba(255, 154, 90, 0.44));
-}
-
-.cta-cool:hover,
-.cta-cool:focus-visible {
-	box-shadow:
-		0 0 0.25rem rgba(0, 0, 0, 0.42),
-		-0.1rem -0.1rem 0.76rem rgba(239, 71, 101, 0.26),
-		0.1rem 0.1rem 0.76rem rgba(255, 154, 90, 0.26);
 }
 
 .legacy-stack h1,

@@ -19,12 +19,12 @@ export default function Nav() {
 				<div className="flex items-start gap-3">
 					<Link
 						href="/"
-						className="shrink-0 pl-3 pt-2 text-xs font-semibold tracking-[0.2em] text-white md:pl-5 md:pt-2.5 md:text-lg mr-auto"
+						className="shrink-0 pl-3 pt-2 font-semibold tracking-[0.2em] text-white md:pl-5 md:pt-2.5 text-lg mr-auto"
 						aria-label="TitaniumNetwork home"
 					>
-						<span className="align-middle text-[1.5em] text-white/70">[</span>
+						<span className="align-middle text-3xl text-white/70">[</span>
 						<span className="mx-1.5 align-middle">TITANIUMNETWORK</span>
-						<span className="align-middle text-[1.5em] text-white/70">]</span>
+						<span className="align-middle text-3xl text-white/70">]</span>
 					</Link>
 
 					<motion.nav
@@ -64,7 +64,12 @@ export default function Nav() {
 									{navLinks.map((item) => (
 										<li key={item.label}>
 											{item.external ? (
-												<a href={item.href} target="_blank" className="nav-link-plain">
+												<a
+													href={item.href}
+													target="_blank"
+													rel="noreferrer"
+													className="nav-link-plain"
+												>
 													{item.label}
 												</a>
 											) : (
@@ -87,18 +92,10 @@ export default function Nav() {
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.38, ease: [0.2, 0.9, 0.2, 1], delay: 0.05 }}
 			>
-				<DockBrandButton
-					href="https://discord.gg/unblock"
-					label="Discord"
-					maskId="dock-mask-discord"
-				>
+				<DockBrandButton href="https://discord.gg/unblock" label="Discord">
 					<FaDiscord />
 				</DockBrandButton>
-				<DockBrandButton
-					href="https://github.com/titaniumnetwork-dev"
-					label="GitHub"
-					maskId="dock-mask-github"
-				>
+				<DockBrandButton href="https://github.com/titaniumnetwork-dev" label="GitHub">
 					<FaGithub />
 				</DockBrandButton>
 			</motion.div>
@@ -109,7 +106,7 @@ export default function Nav() {
 				viewBox="0 0 210 48"
 				style={{ transform: "rotate(180deg)" }}
 				fill="none"
-				className="fixed left-0 bottom-0 z-0 h-[48px] w-[210px]"
+				className="fixed -left-4 bottom-0 z-0 h-[48px] w-[210px]"
 				role="presentation"
 				aria-hidden="true"
 			>
@@ -130,17 +127,17 @@ function DockBrandButton({
 }: {
 	href: string;
 	label: string;
-	maskId: string;
 	children: ReactNode;
 }) {
 	return (
 		<a
 			href={href}
 			target="_blank"
+			rel="noreferrer"
 			aria-label={label}
-			className="group relative block h-10 w-16 m-1"
+			className="group relative block h-12 w-20"
 		>
-			<span className="absolute inset-0 z-10 flex items-center justify-center text-sm text-white/78 transition-colors group-hover:text-white">
+			<span className="absolute inset-0 z-10 flex items-center justify-center text-xl text-white/78 transition-colors group-hover:text-white">
 				{children}
 			</span>
 		</a>

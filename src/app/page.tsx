@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import { FadeIn } from "../components/Motion";
+import { HeroActions } from "../components/HeroActions";
 
 export const metadata: Metadata = {
 	title: "TitaniumNetwork",
@@ -18,23 +18,24 @@ export default function Home() {
 						Services for a less restrictive web experience, built with a focus on
 						access, privacy, and practical deployment.
 					</p>
-					<div className="mt-9 flex flex-wrap gap-3">
-						<Link
-							title="Wondering on how to unblock sites or self-host?"
-							className="cta-hot"
-							href="/setup"
-						>
-							Get Started
-						</Link>
-						<a
-							title="Look here for either contributing or hosting your own web proxy service using our various open-source projects!"
-							className="cta-cool"
-							href="https://docs.titaniumnetwork.org"
-							target="_blank"
-						>
-							Documentation
-						</a>
-					</div>
+					<HeroActions
+						actions={[
+							{
+								href: "/setup",
+								label: "Get Started",
+								variant: "primary",
+								title: "Wondering on how to unblock sites or self-host?",
+							},
+							{
+								href: "https://docs.titaniumnetwork.org",
+								label: "Documentation",
+								variant: "secondary",
+								external: true,
+								title:
+									"Look here for either contributing or hosting your own web proxy service using our various open-source projects!",
+							},
+						]}
+					/>
 				</FadeIn>
 			</section>
 		</main>
