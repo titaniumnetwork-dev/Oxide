@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 import { FaDiscord, FaGithub } from "react-icons/fa6";
 
@@ -13,6 +14,27 @@ const navLinks = [
 ];
 
 export default function Nav() {
+	const router = useRouter();
+	const prefersReducedMotion = useReducedMotion();
+
+	const handleInternalNav = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+		if (prefersReducedMotion) return;
+		if (
+			event.defaultPrevented ||
+			event.button !== 0 ||
+			event.metaKey ||
+			event.ctrlKey ||
+			event.shiftKey ||
+			event.altKey
+		) {
+			return;
+		}
+		event.preventDefault();
+		window.setTimeout(() => {
+			router.push(href);
+		}, 105);
+	};
+
 	return (
 		<header className="sticky top-0 z-40">
 			<div className="w-full">
@@ -27,9 +49,9 @@ export default function Nav() {
 						<span className="align-middle text-3xl text-white/70">]</span>
 					</Link>
 
-					<motion.nav
-						aria-label="Primary"
-						className="relative h-[48px] min-w-0 flex-1"
+						<motion.nav
+							aria-label="Primary"
+							className="relative h-12 min-w-0 flex-1"
 						initial={{ opacity: 0, y: -10 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.42, ease: [0.2, 0.9, 0.2, 1] }}
@@ -41,7 +63,7 @@ export default function Nav() {
 								height="48"
 								viewBox="0 0 210 48"
 								fill="none"
-								className="absolute right-96 top-0 z-0 h-[48px] w-[210px]"
+									className="absolute right-96 top-0 z-0 h-12 w-52.5"
 								role="presentation"
 								aria-hidden="true"
 							>
@@ -57,33 +79,79 @@ export default function Nav() {
 								/>
 							</svg>
 
-							<div className="nav-rail-extension absolute right-0 w-96 top-0 z-0 h-[48px]" />
+								<div className="nav-rail-extension absolute right-0 w-100 top-0 z-0 h-12" />
 
-							<div className="absolute z-10 flex h-full items-center justify-between right-0 pr-12">
-								<ul className="no-scrollbar flex min-w-0 flex-nowrap items-center gap-x-10 overflow-x-auto">
-									{navLinks.map((item) => (
-										<li key={item.label}>
-											{item.external ? (
-												<a
-													href={item.href}
-													target="_blank"
-													rel="noreferrer"
-													className="nav-link-plain"
-												>
-													{item.label}
-												</a>
-											) : (
-												<Link href={item.href} className="nav-link-plain">
-													{item.label}
-												</Link>
-											)}
-										</li>
-									))}
-								</ul>
+								<div className="absolute z-10 flex h-full items-center justify-between right-0 pr-12">
+									<ul className="no-scrollbar flex min-w-0 flex-nowrap items-center gap-x-10 overflow-x-auto">
+										{navLinks.map((item) => (
+											<li key={item.label}>
+												{item.external ? (
+													<motion.a
+														href={item.href}
+														target="_blank"
+														rel="noreferrer"
+														className="nav-link-plain"
+														whileHover={
+															prefersReducedMotion
+																? undefined
+																: {
+																		scale: 1.03,
+																		color: "rgba(255,248,251,0.96)",
+																		textShadow: "0 0 1px rgba(255,248,251,0.42)",
+																	}
+														}
+														whileTap={
+															prefersReducedMotion
+																? undefined
+																: {
+																		scale: 0.97,
+																		color: "rgba(255,248,251,0.74)",
+																		textShadow: "0 0 2px rgba(255,248,251,0.28)",
+																	}
+														}
+														transition={{ duration: 0.1, ease: "easeOut" }}
+													>
+														{item.label}
+													</motion.a>
+												) : (
+													<Link
+														href={item.href}
+														className="nav-link-plain"
+														onClick={(event) => handleInternalNav(event, item.href)}
+													>
+														<motion.span
+															className="nav-link-label"
+															whileHover={
+																prefersReducedMotion
+																	? undefined
+																	: {
+																			scale: 1.03,
+																			color: "rgba(255,248,251,0.96)",
+																			textShadow: "0 0 1px rgba(255,248,251,0.42)",
+																		}
+															}
+															whileTap={
+																prefersReducedMotion
+																	? undefined
+																	: {
+																			scale: 0.97,
+																			color: "rgba(255,248,251,0.74)",
+																			textShadow: "0 0 2px rgba(255,248,251,0.28)",
+																		}
+															}
+															transition={{ duration: 0.1, ease: "easeOut" }}
+														>
+															{item.label}
+														</motion.span>
+													</Link>
+												)}
+											</li>
+										))}
+									</ul>
+								</div>
 							</div>
-						</div>
-					</motion.nav>
-				</div>
+						</motion.nav>
+					</div>
 			</div>
 
 			<motion.div
@@ -106,7 +174,7 @@ export default function Nav() {
 				viewBox="0 0 210 48"
 				style={{ transform: "rotate(180deg)" }}
 				fill="none"
-				className="fixed -left-4 bottom-0 z-0 h-[48px] w-[210px]"
+					className="fixed -left-4 bottom-0 z-0 h-12 w-52.5"
 				role="presentation"
 				aria-hidden="true"
 			>

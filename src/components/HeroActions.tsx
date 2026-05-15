@@ -20,13 +20,13 @@ export function HeroActions({ actions }: { actions: HeroAction[] }) {
 	const secondaryButtonClass =
 		"text-white border-white/30 bg-white/[0.06] hover:bg-white/[0.1] hover:border-white/50";
 
-	return (
-		<motion.div
-			className="mt-9 flex flex-wrap gap-3"
-			initial={prefersReducedMotion ? false : { opacity: 0, y: 14 }}
-			animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-			transition={{ duration: 0.44, ease: [0.2, 0.9, 0.2, 1] }}
-		>
+		return (
+			<motion.div
+				className="mt-9 flex flex-wrap justify-center gap-3"
+				initial={prefersReducedMotion ? false : { opacity: 0, y: 14 }}
+				animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+				transition={{ duration: 0.44, ease: [0.2, 0.9, 0.2, 1] }}
+			>
 			{actions.map((action, index) => (
 				<motion.div
 					key={action.label}

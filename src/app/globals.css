@@ -79,21 +79,26 @@ code {
 .nav-link-plain {
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
 	padding: 0.34rem 0.62rem;
-	border-bottom: 1px solid transparent;
 	color: var(--muted);
 	font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	font-size: 0.95rem;
 	font-weight: 400;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
-	transition: color 0.2s ease, border-color 0.2s ease;
+	transition: color 0.12s ease, text-shadow 0.12s ease, transform 0.12s ease;
+}
+
+.nav-link-label {
+	display: inline-block;
+	transition: color 0.12s ease, text-shadow 0.12s ease, transform 0.12s ease;
 }
 
 .nav-link-plain:hover,
 .nav-link-plain:focus-visible {
 	color: var(--text);
-	border-color: var(--line-strong);
+	text-shadow: 0 0 1px rgba(255, 248, 251, 0.4);
 }
 
 .content-frame {
