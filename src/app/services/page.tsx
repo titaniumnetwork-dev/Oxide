@@ -1,124 +1,109 @@
 import { Metadata } from "next";
-import disabled from "../../lib/disabled";
+import { FadeIn } from "../../components/Motion";
 
 export const metadata: Metadata = {
 	title: "Services",
 };
 
+const serviceGroups = [
+	{
+		title: "Browsing",
+		services: [
+			{
+				name: "InvisiProxy LTS",
+				href: "https://invisiproxy.com",
+				source: "https://github.com/QuiteAFancyEmerald/InvisiProxy/",
+			},
+			{
+				name: "DayDreamX",
+				href: "https://daydreamx.pro",
+				source: "https://gitlab.com/nightnetwork/daydreamx",
+			},
+			{
+				name: "Incognito",
+				href: "https://incog.works",
+				source: "https://github.com/MotorTruck1221/Incognito",
+			},
+			{
+				name: "Lunar",
+				href: "https://nebulaservices.org",
+				source: "https://github.com/NebulaServices/Nebula",
+			},
+			{
+				name: "Nebula",
+				href: "https://nebulaservices.org",
+				source: "https://github.com/NebulaServices/Nebula",
+			},
+		],
+	},
+	{
+		title: "WebOS",
+		services: [
+			{
+				name: "AnuraOS",
+				href: "https://anura.pro",
+				source: "https://github.com/MercuryWorkshop/anuraOS",
+			},
+			{
+				name: "Terbium",
+				href: "https://terbiumon.top",
+				source: "https://github.com/TerbiumOS/web-v2",
+			},
+		],
+	},
+	{
+		title: "Unblocked Games",
+		services: [
+			{
+				name: "Truffled",
+				href: "https://truffled.lol",
+				source: "https://github.com/aukak/truffled",
+			},
+			{
+				name: "Space",
+				href: "https://gointospace.app",
+				source: "https://gitlab.com/nightnetwork/Space",
+			},
+			{
+				name: "Kazwire",
+				href: "https://kazwire.com",
+				source: "https://github.com/whos-evan/kazwire",
+			},
+			{
+				name: "Definitely Science",
+				href: "https://definitelyscience.com",
+				source: "https://github.com/titaniumnetwork-dev/Definitely-Science",
+			},
+		],
+	},
+];
+
 export default function Services() {
 	return (
-		<>
-			<div className="background"></div>
-			<div className="content">
-				<div className="docs">
-					<h2 id="web-proxy-services">Web Proxy Services</h2>
-					<div data-aos="fade-right">
-						<h3 id="web-proxy-services">Browsing</h3>
-						<br />
-						<ul className="service-lists">
-							<li>
-								<Service
-									href="https://invisiproxy.com"
-									source="https://github.com/QuiteAFancyEmerald/InvisiProxy/"
-								>
-									InvisiProxy LTS
-								</Service>
-							</li>
-							<li>
-								<Service
-									href="https://daydreamx.pro"
-									source="https://gitlab.com/nightnetwork/daydreamx"
-								>
-									DayDreamX
-								</Service>
-							</li>
-							<li>
-								<Service
-									href="https://incog.works"
-									source="https://github.com/MotorTruck1221/Incognito"
-								>
-									Incognito
-								</Service>
-							</li>
-							<li>
-								<Service
-									href="https://nebulaservices.org"
-									source="https://github.com/NebulaServices/Nebula"
-								>
-									Lunar
-								</Service>
-							</li>
-							<li>
-								<Service
-									href="https://nebulaservices.org"
-									source="https://github.com/NebulaServices/Nebula"
-								>
-									Nebula
-								</Service>
-							</li>
-						</ul>
-						<br />
-						<h3 id="web-proxy-services">WebOS</h3>
-						<br />
-						<ul className="service-lists">
-							<li>
-								<Service
-									href="https://anura.pro"
-									source="https://github.com/MercuryWorkshop/anuraOS"
-								>
-									AnuraOS
-								</Service>
-							</li>
-							<li>
-								<Service
-									href="https://terbiumon.top"
-									source="https://github.com/TerbiumOS/web-v2"
-								>
-									Terbium
-								</Service>
-							</li>
-						</ul>
-						<br />
-						<h3 id="web-proxy-services">Unblocked Games</h3>
-						<br />
-						<ul className="service-lists">
-							<li>
-								<Service
-									href="https://truffled.lol"
-									source="https://github.com/aukak/truffled"
-								>
-									Truffled
-								</Service>
-							</li>
-							<li>
-								<Service
-									href="https://gointospace.app"
-									source="https://gitlab.com/nightnetwork/Space"
-								>
-									Space
-								</Service>
-							</li>
-							<li>
-								<Service
-									href="https://kazwire.com"
-									source="https://github.com/whos-evan/kazwire"
-								>
-									Kazwire
-								</Service>
-							</li>
-							<li>
-								<Service
-									href="https://definitelyscience.com"
-									source="https://github.com/titaniumnetwork-dev/Definitely-Science"
-								>
-									Definitely Science
-								</Service>
-							</li>
-						</ul>
-					</div>
+		<main className="mx-auto w-full max-w-[1200px] px-4 pb-16 pt-8 md:px-8">
+			<section className="content-frame mx-auto max-w-[980px]">
+				<div className="legacy-stack">
+					<FadeIn>
+						<h2 id="web-proxy-services">Web Proxy Services</h2>
+					</FadeIn>
+
+					{serviceGroups.map((group, index) => (
+						<FadeIn className="service-group" key={group.title} delay={index * 0.05 + 0.02}>
+							<h3>{group.title}</h3>
+							<ul className="service-list-legacy">
+								{group.services.map((service) => (
+									<li key={service.name}>
+										<Service href={service.href} source={service.source}>
+											{service.name}
+										</Service>
+									</li>
+								))}
+							</ul>
+						</FadeIn>
+					))}
 				</div>
-			</div>
-		</>
+			</section>
+		</main>
 	);
 }
 
@@ -132,24 +117,20 @@ function Service({
 	source?: string;
 }) {
 	return (
-		<>
-			<a href={href} target="_blank">
+		<div className="service-row-legacy">
+			<a className="service-name" href={href} target="_blank">
 				{children}
 			</a>
-			<div>
-				<a href={href} target="_blank">
+			<div className="service-meta">
+				<a className="service-link-icon" href={href} target="_blank">
 					❐
 				</a>
-			</div>
-			<div>
 				{source ? (
-					<a href={source} target="_blank">
+					<a className="service-source" href={source} target="_blank">
 						[Source]
 					</a>
-				) : (
-					""
-				)}
+				) : null}
 			</div>
-		</>
+		</div>
 	);
 }

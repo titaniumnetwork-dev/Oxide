@@ -1,38 +1,148 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Link from "next/link";
+import type { ReactNode } from "react";
+import { FaDiscord, FaGithub } from "react-icons/fa6";
+
+const navLinks = [
+	{ href: "/setup", label: "Setup" },
+	{ href: "/services", label: "Services" },
+	{ href: "/socials", label: "Socials" },
+	{ href: "https://docs.titaniumnetwork.org", label: "Docs", external: true },
+];
 
 export default function Nav() {
 	return (
-		<nav className="header">
-			<div className="sitetitle">
-				<Link href="/">TitaniumNetwork</Link>
+		<header className="sticky top-0 z-40">
+			<div className="w-full">
+				<div className="flex items-start gap-3">
+					<Link
+						href="/"
+						className="shrink-0 pl-3 pt-2 text-xs font-semibold tracking-[0.2em] text-white md:pl-5 md:pt-2.5 md:text-lg mr-auto"
+						aria-label="TitaniumNetwork home"
+					>
+						<span className="align-middle text-[1.5em] text-white/70">[</span>
+						<span className="mx-1.5 align-middle">TITANIUMNETWORK</span>
+						<span className="align-middle text-[1.5em] text-white/70">]</span>
+					</Link>
+
+					<motion.nav
+						aria-label="Primary"
+						className="relative h-[48px] min-w-0 flex-1"
+						initial={{ opacity: 0, y: -10 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.42, ease: [0.2, 0.9, 0.2, 1] }}
+					>
+						<div className="relative h-full w-full">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="210"
+								height="48"
+								viewBox="0 0 210 48"
+								fill="none"
+								className="absolute right-96 top-0 z-0 h-[48px] w-[210px]"
+								role="presentation"
+								aria-hidden="true"
+							>
+								<mask id="path-1-inside-1-nav-main" fill="white">
+									<path d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0" />
+								</mask>
+								<path d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0" fill="#220934" />
+								<path
+									d="M0 -1C-0.552285 -1 -1 -0.552285 -1 0C-1 0.552285 -0.552285 1 0 1V0V-1ZM210 48V49H211V48H210ZM211 0C211 -0.552285 210.552 -1 210 -1C209.448 -1 209 -0.552285 209 0H210H211ZM57.7516 48V49H210V48V47H57.7516V48ZM210 48H211V0H210H209V48H210ZM0 0V1C9.31973 1 15.1441 3.90917 19.2727 8.19387C23.4583 12.5377 25.9728 18.3582 28.517 24.3887C31.0303 30.346 33.5776 36.5246 37.8674 41.1778C42.2197 45.8988 48.3065 49 57.7516 49V48V47C48.8212 47 43.2827 44.1012 39.3379 39.8222C35.3306 35.4754 32.909 29.654 30.3597 23.6113C27.8412 17.6418 25.1994 11.4623 20.7129 6.80613C16.1693 2.09083 9.80581 -1 0 -1V0Z"
+									fill="white"
+									fillOpacity="0.141176"
+									mask="url(#path-1-inside-1-nav-main)"
+								/>
+							</svg>
+
+							<div className="nav-rail-extension absolute right-0 w-96 top-0 z-0 h-[48px]" />
+
+							<div className="absolute z-10 flex h-full items-center justify-between right-0 pr-12">
+								<ul className="no-scrollbar flex min-w-0 flex-nowrap items-center gap-x-10 overflow-x-auto">
+									{navLinks.map((item) => (
+										<li key={item.label}>
+											{item.external ? (
+												<a href={item.href} target="_blank" className="nav-link-plain">
+													{item.label}
+												</a>
+											) : (
+												<Link href={item.href} className="nav-link-plain">
+													{item.label}
+												</Link>
+											)}
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
+					</motion.nav>
+				</div>
 			</div>
-			<div className="responsive">
-				<i className="fa-solid fa-bars"></i>
-			</div>
-			<ul id="navbar-sel" className="navbar">
-				<li>
-					<Link href="/setup">Setup</Link>
-				</li>
-				<li>
-					<Link href="/services">Services</Link>
-				</li>
-				<li>
-					<Link href="/socials">Socials</Link>
-				</li>
-				<li>
-					<a href="https://docs.titaniumnetwork.org">Docs</a>
-				</li>
-				<li className="social-link">
-					<a href="https://discord.gg/unblock" target="_blank">
-						<i className="fa-brands fa-discord"></i>
-					</a>
-				</li>
-				<li className="social-link">
-					<a href="https://github.com/titaniumnetwork-dev" target="_blank">
-						<i className="fa-brands fa-github"></i>
-					</a>
-				</li>
-			</ul>
-		</nav>
+
+			<motion.div
+				className="fixed bottom-0 left-0 z-50 flex items-end"
+				initial={{ opacity: 0, y: 8 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.38, ease: [0.2, 0.9, 0.2, 1], delay: 0.05 }}
+			>
+				<DockBrandButton
+					href="https://discord.gg/unblock"
+					label="Discord"
+					maskId="dock-mask-discord"
+				>
+					<FaDiscord />
+				</DockBrandButton>
+				<DockBrandButton
+					href="https://github.com/titaniumnetwork-dev"
+					label="GitHub"
+					maskId="dock-mask-github"
+				>
+					<FaGithub />
+				</DockBrandButton>
+			</motion.div>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="210"
+				height="48"
+				viewBox="0 0 210 48"
+				style={{ transform: "rotate(180deg)" }}
+				fill="none"
+				className="fixed left-0 bottom-0 z-0 h-[48px] w-[210px]"
+				role="presentation"
+				aria-hidden="true"
+			>
+				<mask id="path-1-inside-1-nav-main" fill="white">
+					<path d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0"></path>
+				</mask>
+				<path d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0" fill="#220934"></path>
+				<path d="M0 -1C-0.552285 -1 -1 -0.552285 -1 0C-1 0.552285 -0.552285 1 0 1V0V-1ZM210 48V49H211V48H210ZM211 0C211 -0.552285 210.552 -1 210 -1C209.448 -1 209 -0.552285 209 0H210H211ZM57.7516 48V49H210V48V47H57.7516V48ZM210 48H211V0H210H209V48H210ZM0 0V1C9.31973 1 15.1441 3.90917 19.2727 8.19387C23.4583 12.5377 25.9728 18.3582 28.517 24.3887C31.0303 30.346 33.5776 36.5246 37.8674 41.1778C42.2197 45.8988 48.3065 49 57.7516 49V48V47C48.8212 47 43.2827 44.1012 39.3379 39.8222C35.3306 35.4754 32.909 29.654 30.3597 23.6113C27.8412 17.6418 25.1994 11.4623 20.7129 6.80613C16.1693 2.09083 9.80581 -1 0 -1V0Z" fill="white" fillOpacity="0.141176" mask="url(#path-1-inside-1-nav-main)"></path>
+			</svg>
+		</header>
+	);
+}
+
+function DockBrandButton({
+	href,
+	label,
+	children,
+}: {
+	href: string;
+	label: string;
+	maskId: string;
+	children: ReactNode;
+}) {
+	return (
+		<a
+			href={href}
+			target="_blank"
+			aria-label={label}
+			className="group relative block h-10 w-16 m-1"
+		>
+			<span className="absolute inset-0 z-10 flex items-center justify-center text-sm text-white/78 transition-colors group-hover:text-white">
+				{children}
+			</span>
+		</a>
 	);
 }
