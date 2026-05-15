@@ -26,8 +26,8 @@ const serviceGroups = [
 			},
 			{
 				name: "Lunar",
-				href: "https://nebulaservices.org",
-				source: "https://github.com/NebulaServices/Nebula",
+				href: "https://lunaron.top/",
+				source: "https://github.com/Lunar-Proxy/lunar-v2",
 			},
 			{
 				name: "Nebula",
