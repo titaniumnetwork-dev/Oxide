@@ -26,10 +26,10 @@ export default function Services() {
 							</li>
 							<li>
 								<Service
-									href="https://nebulaservices.org"
-									source="https://github.com/NebulaServices/Nebula"
+									href="https://daydreamx.pro"
+									source="https://gitlab.com/nightnetwork/daydreamx"
 								>
-									Nebula
+									DayDreamX
 								</Service>
 							</li>
 							<li>
@@ -42,10 +42,18 @@ export default function Services() {
 							</li>
 							<li>
 								<Service
-									href="https://radon.games"
-									source="https://github.com/Radon-Games/Radon-Games"
+									href="https://nebulaservices.org"
+									source="https://github.com/NebulaServices/Nebula"
 								>
-									DayDreamX
+									Lunar
+								</Service>
+							</li>
+							<li>
+								<Service
+									href="https://nebulaservices.org"
+									source="https://github.com/NebulaServices/Nebula"
+								>
+									Nebula
 								</Service>
 							</li>
 						</ul>
