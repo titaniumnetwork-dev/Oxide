@@ -8,19 +8,23 @@ export const metadata: Metadata = {
 
 export default function Setup() {
 	return (
-		<main className="mx-auto w-full max-w-[1200px] px-4 pb-16 pt-8 md:px-8">
+		<main className="mx-auto w-full max-w-300 px-4 pb-16 pt-8 md:px-8">
 			<FadeIn>
-				<section className="content-frame mx-auto max-w-[980px]">
+				<section className="content-frame mx-auto max-w-245">
 					<div className="legacy-stack">
 						<h1 id="usage">Usage</h1>
 						<p>
 							TitaniumNetwork&apos;s services can be utilized either by hosting
-							manually or using the officially hosted services. These servies
+							manually or using the officially hosted services. These services
 							such as InvisiProxy or AnuraOS can be obtained in the{" "}
-							<a href="https://discord.gg/unblock" target="_blank">
-								TN Discord
-							</a>{" "}
-							with a brief overview on the <Link href="/services">Services</Link>.
+							<strong>
+								<a href="https://discord.gg/unblock" target="_blank">
+									TN Discord
+								</a>
+							</strong>{" "}
+							with a brief overview on the <strong>
+								<Link href="/services">Services</Link>
+							</strong>.
 						</p>
 						<h3>Web Proxy Services</h3>
 						<p>
@@ -50,7 +54,7 @@ export default function Setup() {
 						<p>
 							If you wish to setup any of TitaniumNetwork&apos;s services please
 							check out{" "}
-							<a href="https://docs.titaniumnetwork.org">the documentation.</a>
+							<strong><a href="https://docs.titaniumnetwork.org">the documentation</a></strong>.
 						</p>
 					</div>
 				</section>

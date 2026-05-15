@@ -60,8 +60,8 @@ const socials = [
 
 export default function Socials() {
 	return (
-		<main className="mx-auto w-full max-w-[1200px] px-4 pb-16 pt-8 md:px-8">
-			<section className="content-frame mx-auto max-w-[980px]">
+		<main className="mx-auto w-full max-w-300 px-4 pb-16 pt-8 md:px-8">
+			<section className="content-frame mx-auto max-w-245">
 				<div className="legacy-stack">
 					<FadeIn>
 						<h2 id="titanium-socials">Socials</h2>

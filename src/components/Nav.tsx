@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 import { FaDiscord, FaGithub } from "react-icons/fa6";
 
@@ -14,8 +14,36 @@ const navLinks = [
 ];
 
 export default function Nav() {
+	const pathname = usePathname();
 	const router = useRouter();
 	const prefersReducedMotion = useReducedMotion();
+	const navLabelVariants = prefersReducedMotion
+		? undefined
+		: {
+				rest: {
+					scale: 1,
+					color: "rgba(255,248,251,0.76)",
+					textShadow: "0 0 0 rgba(255,248,251,0)",
+				},
+				hover: {
+					scale: 1.01,
+					color: "color-mix(in oklab, var(--primary) 72%, white 28%)",
+					textShadow: "0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%)",
+				},
+				tap: {
+					scale: 0.97,
+					color: "color-mix(in oklab, var(--primary) 64%, white 36%)",
+					textShadow: "0 0 1px color-mix(in oklab, var(--primary) 52%, white 48%)",
+				},
+				active: {
+					scale: 1,
+					color: "rgba(255,248,251,0.94)",
+					textShadow: "0 0 1px rgba(255,248,251,0.38)",
+				},
+			};
+
+	const isHomeActive = pathname === "/";
+	const isNavItemActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
 	const handleInternalNav = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
 		if (prefersReducedMotion) return;
@@ -41,21 +69,53 @@ export default function Nav() {
 				<div className="flex items-start gap-3">
 					<Link
 						href="/"
-						className="shrink-0 pl-3 pt-2 font-semibold tracking-[0.2em] text-white md:pl-5 md:pt-2.5 text-lg mr-auto"
+						className="group shrink-0 pl-3 pt-2 font-semibold tracking-[0.2em] text-white md:pl-5 md:pt-2.5 text-lg mr-auto"
 						aria-label="TitaniumNetwork home"
 					>
-						<span className="align-middle text-3xl text-white/70">[</span>
-						<span className="mx-1.5 align-middle">TITANIUMNETWORK</span>
-						<span className="align-middle text-3xl text-white/70">]</span>
+							<span
+								className="align-middle text-3xl text-white/70 [text-shadow:0_0_0_transparent] transition-[color,text-shadow] duration-150 ease-out group-hover:text-[color-mix(in_oklab,var(--primary)_72%,white_28%)] group-hover:[text-shadow:0_0_1px_color-mix(in_oklab,var(--primary)_58%,white_42%)]"
+							style={
+								isHomeActive
+									? {
+											color: "color-mix(in oklab, var(--primary) 72%, white 28%)",
+											textShadow:
+												"0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%)",
+										}
+									: undefined
+							}
+						>
+							[
+						</span>
+							<span
+								className="mx-1.5 align-middle text-white/82 transition-colors duration-150 ease-out group-hover:text-white"
+							style={
+								isHomeActive
+									? {
+											color: "rgba(255,248,251,1)",
+											textShadow: "0 0 1px rgba(255,248,251,0.22)",
+										}
+									: undefined
+							}
+						>
+							TITANIUMNETWORK
+						</span>
+							<span
+								className="align-middle text-3xl text-white/70 [text-shadow:0_0_0_transparent] transition-[color,text-shadow] duration-150 ease-out group-hover:text-[color-mix(in_oklab,var(--primary)_72%,white_28%)] group-hover:[text-shadow:0_0_1px_color-mix(in_oklab,var(--primary)_58%,white_42%)]"
+							style={
+								isHomeActive
+									? {
+											color: "color-mix(in oklab, var(--primary) 72%, white 28%)",
+											textShadow:
+												"0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%)",
+										}
+									: undefined
+							}
+						>
+							]
+						</span>
 					</Link>
 
-						<motion.nav
-							aria-label="Primary"
-							className="relative h-12 min-w-0 flex-1"
-						initial={{ opacity: 0, y: -10 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.42, ease: [0.2, 0.9, 0.2, 1] }}
-					>
+						<nav aria-label="Primary" className="relative h-12 min-w-0 flex-1">
 						<div className="relative h-full w-full">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -83,63 +143,42 @@ export default function Nav() {
 
 								<div className="absolute z-10 flex h-full items-center justify-between right-0 pr-12">
 									<ul className="no-scrollbar flex min-w-0 flex-nowrap items-center gap-x-10 overflow-x-auto">
-										{navLinks.map((item) => (
-											<li key={item.label}>
-												{item.external ? (
+											{navLinks.map((item) => (
+												<li key={item.label}>
+													{item.external ? (
 													<motion.a
 														href={item.href}
 														target="_blank"
 														rel="noreferrer"
 														className="nav-link-plain"
-														whileHover={
-															prefersReducedMotion
-																? undefined
-																: {
-																		scale: 1.03,
-																		color: "rgba(255,248,251,0.96)",
-																		textShadow: "0 0 1px rgba(255,248,251,0.42)",
-																	}
-														}
-														whileTap={
-															prefersReducedMotion
-																? undefined
-																: {
-																		scale: 0.97,
-																		color: "rgba(255,248,251,0.74)",
-																		textShadow: "0 0 2px rgba(255,248,251,0.28)",
-																	}
-														}
 														transition={{ duration: 0.1, ease: "easeOut" }}
 													>
-														{item.label}
-													</motion.a>
-												) : (
-													<Link
-														href={item.href}
-														className="nav-link-plain"
-														onClick={(event) => handleInternalNav(event, item.href)}
-													>
-														<motion.span
-															className="nav-link-label"
-															whileHover={
-																prefersReducedMotion
-																	? undefined
-																	: {
-																			scale: 1.03,
-																			color: "rgba(255,248,251,0.96)",
-																			textShadow: "0 0 1px rgba(255,248,251,0.42)",
-																		}
-															}
-															whileTap={
-																prefersReducedMotion
-																	? undefined
-																	: {
-																			scale: 0.97,
-																			color: "rgba(255,248,251,0.74)",
-																			textShadow: "0 0 2px rgba(255,248,251,0.28)",
-																		}
-															}
+															<motion.span
+																className="nav-link-label"
+																variants={navLabelVariants}
+																initial="rest"
+																animate="rest"
+															whileHover="hover"
+															whileTap="tap"
 															transition={{ duration: 0.1, ease: "easeOut" }}
+														>
+															{item.label}
+														</motion.span>
+													</motion.a>
+													) : (
+														<Link
+															href={item.href}
+															className="nav-link-plain"
+															onClick={(event) => handleInternalNav(event, item.href)}
+														>
+															<motion.span
+																className="nav-link-label"
+																variants={navLabelVariants}
+																initial="rest"
+																animate={isNavItemActive(item.href) ? "active" : "rest"}
+																whileHover="hover"
+																whileTap="tap"
+																transition={{ duration: 0.1, ease: "easeOut" }}
 														>
 															{item.label}
 														</motion.span>
@@ -150,23 +189,19 @@ export default function Nav() {
 									</ul>
 								</div>
 							</div>
-						</motion.nav>
+						</nav>
 					</div>
 			</div>
 
-			<motion.div
-				className="fixed bottom-0 left-0 z-50 flex items-end"
-				initial={{ opacity: 0, y: 8 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.38, ease: [0.2, 0.9, 0.2, 1], delay: 0.05 }}
-			>
+			<div
+				className="fixed bottom-0 left-0 z-50 flex items-end">
 				<DockBrandButton href="https://discord.gg/unblock" label="Discord">
 					<FaDiscord />
 				</DockBrandButton>
 				<DockBrandButton href="https://github.com/titaniumnetwork-dev" label="GitHub">
 					<FaGithub />
 				</DockBrandButton>
-			</motion.div>
+			</div>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="210"
@@ -198,16 +233,16 @@ function DockBrandButton({
 	children: ReactNode;
 }) {
 	return (
-		<a
-			href={href}
-			target="_blank"
-			rel="noreferrer"
-			aria-label={label}
-			className="group relative block h-12 w-20"
-		>
-			<span className="absolute inset-0 z-10 flex items-center justify-center text-xl text-white/78 transition-colors group-hover:text-white">
-				{children}
-			</span>
-		</a>
-	);
+			<a
+				href={href}
+				target="_blank"
+				rel="noreferrer"
+				aria-label={label}
+				className="dock-brand-button group relative block h-12 w-20"
+			>
+				<span className="dock-brand-icon absolute inset-0 z-10 flex items-center justify-center text-xl">
+					{children}
+				</span>
+			</a>
+		);
 }

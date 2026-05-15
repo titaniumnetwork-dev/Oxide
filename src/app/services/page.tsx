@@ -82,15 +82,17 @@ export default function Services() {
 	return (
 		<main className="mx-auto w-full max-w-300 px-4 pb-16 pt-8 md:px-8">
 			<section className="content-frame mx-auto max-w-245">
-				<div className="legacy-stack">
+				<div className="legacy-stack services-stack">
 					<FadeIn>
-						<h2 id="web-proxy-services">Web Proxy Services</h2>
+						<h2 id="web-proxy-services" className="services-kicker">
+							Web Proxy Services
+						</h2>
 					</FadeIn>
 
 					{serviceGroups.map((group, index) => (
 						<FadeIn className="service-group" key={group.title} delay={index * 0.05 + 0.02}>
-							<h3>{group.title}</h3>
-							<ul className="service-list-legacy">
+							<h3 className="service-group-title">{group.title}</h3>
+							<ul className="service-list-legacy service-group-list">
 								{group.services.map((service) => (
 									<li key={service.name}>
 										<Service href={service.href} source={service.source}>
@@ -100,10 +102,10 @@ export default function Services() {
 								))}
 							</ul>
 						</FadeIn>
-					))}
-				</div>
-			</section>
-		</main>
+						))}
+					</div>
+				</section>
+			</main>
 	);
 }
 
@@ -116,18 +118,15 @@ function Service({
 	children: React.ReactNode;
 	source?: string;
 }) {
-	return (
-		<div className="service-row-legacy">
-			<a className="service-name" href={href} target="_blank">
-				{children}
-			</a>
-			<div className="service-meta">
-				<a className="service-link-icon" href={href} target="_blank">
-					❐
+		return (
+			<div className="service-row-legacy">
+				<a className="service-name" href={href} target="_blank">
+					{children}
 				</a>
-				{source ? (
-					<a className="service-source" href={source} target="_blank">
-						[Source]
+				<div className="service-meta">
+					{source ? (
+						<a className="service-source" href={source} target="_blank">
+							[Source]
 					</a>
 				) : null}
 			</div>
