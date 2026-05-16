@@ -10,7 +10,9 @@ export default function NotFound() {
 		<main className="mx-auto w-full max-w-275 px-4 pb-16 pt-8 md:px-8">
 			<section className="content-frame min-h-[calc(100vh-11.5rem)] grid place-items-center pt-6 pb-8">
 				<div className="w-full max-w-180 text-center">
-					<p className="text-sm font-semibold tracking-[0.18em] text-white/65">404</p>
+					<p className="text-sm font-semibold tracking-[0.18em] text-white/65">
+						404
+					</p>
 					<h1 className="mt-3 text-balance text-[clamp(2.1rem,6.2vw,4rem)] leading-[0.95] tracking-[-0.03em] text-white">
 						Page Not Found
 					</h1>

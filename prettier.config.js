@@ -6,6 +6,7 @@ const config = {
 	useTabs: true,
 	semi: true,
 	singleQuote: false,
+	tabWidth: 4,
 };
 
 export default config;

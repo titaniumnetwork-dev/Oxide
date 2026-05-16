@@ -90,22 +90,31 @@ export default function Services() {
 					</FadeIn>
 
 					{serviceGroups.map((group, index) => (
-						<FadeIn className="service-group" key={group.title} delay={index * 0.05 + 0.02}>
-							<h3 className="service-group-title">{group.title}</h3>
+						<FadeIn
+							className="service-group"
+							key={group.title}
+							delay={index * 0.05 + 0.02}
+						>
+							<h3 className="service-group-title">
+								{group.title}
+							</h3>
 							<ul className="service-list-legacy service-group-list">
 								{group.services.map((service) => (
 									<li key={service.name}>
-										<Service href={service.href} source={service.source}>
+										<Service
+											href={service.href}
+											source={service.source}
+										>
 											{service.name}
 										</Service>
 									</li>
 								))}
 							</ul>
 						</FadeIn>
-						))}
-					</div>
-				</section>
-			</main>
+					))}
+				</div>
+			</section>
+		</main>
 	);
 }
 
@@ -118,15 +127,15 @@ function Service({
 	children: React.ReactNode;
 	source?: string;
 }) {
-		return (
-			<div className="service-row-legacy">
-				<a className="service-name" href={href} target="_blank">
-					{children}
-				</a>
-				<div className="service-meta">
-					{source ? (
-						<a className="service-source" href={source} target="_blank">
-							[Source]
+	return (
+		<div className="service-row-legacy">
+			<a className="service-name" href={href} target="_blank">
+				{children}
+			</a>
+			<div className="service-meta">
+				{source ? (
+					<a className="service-source" href={source} target="_blank">
+						[Source]
 					</a>
 				) : null}
 			</div>

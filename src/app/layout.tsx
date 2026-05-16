@@ -1,6 +1,13 @@
 import { Metadata, Viewport } from "next";
+import { Raleway } from "next/font/google";
 import Nav from "../components/Nav";
 import "./globals.css";
+
+const raleway = Raleway({
+	subsets: ["latin"],
+	weight: ["600"],
+	variable: "--font-raleway",
+});
 
 export const metadata: Metadata = {
 	title: "TitaniumNetwork",
@@ -28,7 +35,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
+		<html
+			lang="en"
+			className={`bg-[#220934] text-white ${raleway.variable}`}
+		>
 			<head>
 				<script
 					type="application/ld+json"
@@ -129,7 +139,7 @@ export default function RootLayout({
 									name: "Where can I obtain more proxy sites?",
 									acceptedAnswer: {
 										"@type": "Answer",
-										text: 'Be sure to join the TitaniumNetwork discord at discord.gg/unblock! Then simply use the bot in #panel to get a new link.',
+										text: "Be sure to join the TitaniumNetwork discord at discord.gg/unblock! Then simply use the bot in #panel to get a new link.",
 									},
 								},
 								{

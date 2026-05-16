@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { FaDiscord, FaGithub } from "react-icons/fa6";
 
 const navLinks = [
@@ -13,10 +13,16 @@ const navLinks = [
 	{ href: "https://docs.titaniumnetwork.org", label: "Docs", external: true },
 ];
 
+const navHoverColor = "#e57f77";
+const navHoverShadowColor = "#ed9891";
+const navTapColor = "#ea8d86";
+const navTapShadowColor = "#f0a39c";
+
 export default function Nav() {
 	const pathname = usePathname();
 	const router = useRouter();
 	const prefersReducedMotion = useReducedMotion();
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const navLabelVariants = prefersReducedMotion
 		? undefined
 		: {
@@ -27,13 +33,13 @@ export default function Nav() {
 				},
 				hover: {
 					scale: 1.01,
-					color: "color-mix(in oklab, var(--primary) 72%, white 28%)",
-					textShadow: "0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%)",
+					color: navHoverColor,
+					textShadow: `0 0 1px ${navHoverShadowColor}`,
 				},
 				tap: {
 					scale: 0.97,
-					color: "color-mix(in oklab, var(--primary) 64%, white 36%)",
-					textShadow: "0 0 1px color-mix(in oklab, var(--primary) 52%, white 48%)",
+					color: navTapColor,
+					textShadow: `0 0 1px ${navTapShadowColor}`,
 				},
 				active: {
 					scale: 1,
@@ -43,9 +49,18 @@ export default function Nav() {
 			};
 
 	const isHomeActive = pathname === "/";
-	const isNavItemActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+	const isNavItemActive = (href: string) =>
+		pathname === href || pathname.startsWith(`${href}/`);
 
-	const handleInternalNav = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+	useEffect(() => {
+		setIsMobileMenuOpen(false);
+	}, [pathname]);
+
+	const handleInternalNav = (
+		event: React.MouseEvent<HTMLAnchorElement>,
+		href: string
+	) => {
+		setIsMobileMenuOpen(false);
 		if (prefersReducedMotion) return;
 		if (
 			event.defaultPrevented ||
@@ -65,15 +80,150 @@ export default function Nav() {
 
 	return (
 		<header className="sticky top-0 z-40">
-			<div className="w-full">
+			<div className="relative md:hidden backdrop-blur-sm border-b border-white/14 bg-[#220934]/20">
+				<div className="flex h-14 items-center justify-between px-3">
+					<Link
+						href="/"
+						className="min-w-0 text-sm font-semibold tracking-[0.18em] text-white"
+						aria-label="TitaniumNetwork home"
+					>
+						<span
+							className="align-middle text-lg"
+							style={{
+								color: "color-mix(in oklab, var(--primary) 72%, white 28%)",
+								textShadow:
+									"0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%)",
+							}}
+						>
+							[
+						</span>
+						<span
+							className="mx-1.5 align-middle"
+							style={{
+								color: "rgba(255,248,251,1)",
+								textShadow: "0 0 1px rgba(255,248,251,0.22)",
+							}}
+						>
+							TN
+						</span>
+						<span
+							className="align-middle text-lg"
+							style={{
+								color: "color-mix(in oklab, var(--primary) 72%, white 28%)",
+								textShadow:
+									"0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%)",
+							}}
+						>
+							]
+						</span>
+					</Link>
+
+					<button
+						type="button"
+						aria-label={
+							isMobileMenuOpen ? "Close menu" : "Open menu"
+						}
+						aria-expanded={isMobileMenuOpen}
+						aria-controls="mobile-main-nav"
+						onClick={() => setIsMobileMenuOpen((open) => !open)}
+						className="inline-flex h-10 items-center justify-center rounded-md px-3 text-xs tracking-[0.18em] text-white/86 transition-colors duration-150 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--primary)"
+					>
+						{isMobileMenuOpen ? "Close" : "Menu"}
+					</button>
+				</div>
+
+				<AnimatePresence>
+					{isMobileMenuOpen ? (
+						<motion.div
+							id="mobile-main-nav"
+							initial={
+								prefersReducedMotion
+									? false
+									: { opacity: 0, y: -8, scale: 0.985 }
+							}
+							animate={
+								prefersReducedMotion
+									? {}
+									: { opacity: 1, y: 0, scale: 1 }
+							}
+							exit={
+								prefersReducedMotion
+									? {}
+									: { opacity: 0, y: -6, scale: 0.99 }
+							}
+							transition={{ duration: 0.16, ease: "easeOut" }}
+							className="absolute left-3 right-3 top-14 z-30 rounded-xl border border-white/14 bg-[#220934]/96 p-3 shadow-[0_16px_34px_rgba(6,0,12,0.35)] backdrop-blur"
+						>
+							<ul className="grid gap-2">
+								{navLinks.map((item, index) => (
+									<motion.li
+										key={item.label}
+										initial={
+											prefersReducedMotion
+												? false
+												: { opacity: 0, y: -4 }
+										}
+										animate={
+											prefersReducedMotion
+												? {}
+												: { opacity: 1, y: 0 }
+										}
+										exit={
+											prefersReducedMotion
+												? {}
+												: { opacity: 0, y: -2 }
+										}
+										transition={{
+											duration: 0.14,
+											ease: "easeOut",
+											delay: prefersReducedMotion
+												? 0
+												: index * 0.02,
+										}}
+									>
+										{item.external ? (
+											<a
+												href={item.href}
+												target="_blank"
+												rel="noreferrer"
+												className="mobile-nav-link"
+												onClick={() =>
+													setIsMobileMenuOpen(false)
+												}
+											>
+												{item.label}
+											</a>
+										) : (
+											<Link
+												href={item.href}
+												className={`mobile-nav-link ${isNavItemActive(item.href) ? "mobile-nav-link-active" : ""}`}
+												onClick={(event) =>
+													handleInternalNav(
+														event,
+														item.href
+													)
+												}
+											>
+												{item.label}
+											</Link>
+										)}
+									</motion.li>
+								))}
+							</ul>
+						</motion.div>
+					) : null}
+				</AnimatePresence>
+			</div>
+
+			<div className="hidden w-full md:block">
 				<div className="flex items-start gap-3">
 					<Link
 						href="/"
-						className="group shrink-0 pl-3 pt-2 font-semibold tracking-[0.2em] text-white md:pl-5 md:pt-2.5 text-lg mr-auto"
+						className="group mr-auto shrink-0 pl-3 pt-2 text-lg font-semibold tracking-[0.2em] text-white md:pl-5 md:pt-2.5"
 						aria-label="TitaniumNetwork home"
 					>
-							<span
-								className="align-middle text-3xl text-white/70 [text-shadow:0_0_0_transparent] transition-[color,text-shadow] duration-150 ease-out group-hover:text-[color-mix(in_oklab,var(--primary)_72%,white_28%)] group-hover:[text-shadow:0_0_1px_color-mix(in_oklab,var(--primary)_58%,white_42%)]"
+						<span
+							className="align-middle text-3xl text-white/70 [text-shadow:0_0_0_transparent] transition-[color,text-shadow] duration-150 ease-out group-hover:text-[color-mix(in_oklab,var(--primary)_72%,white_28%)] group-hover:[text-shadow:0_0_1px_color-mix(in_oklab,var(--primary)_58%,white_42%)]"
 							style={
 								isHomeActive
 									? {
@@ -86,21 +236,22 @@ export default function Nav() {
 						>
 							[
 						</span>
-							<span
-								className="mx-1.5 align-middle text-white/82 transition-colors duration-150 ease-out group-hover:text-white"
+						<span
+							className="mx-1.5 align-middle text-white/82 transition-colors duration-150 ease-out group-hover:text-white font-['Raleway'] tracking-normal top-0.75 relative"
 							style={
 								isHomeActive
 									? {
 											color: "rgba(255,248,251,1)",
-											textShadow: "0 0 1px rgba(255,248,251,0.22)",
+											textShadow:
+												"0 0 1px rgba(255,248,251,0.22)",
 										}
 									: undefined
 							}
 						>
-							TITANIUMNETWORK
+							TitaniumNetwork
 						</span>
-							<span
-								className="align-middle text-3xl text-white/70 [text-shadow:0_0_0_transparent] transition-[color,text-shadow] duration-150 ease-out group-hover:text-[color-mix(in_oklab,var(--primary)_72%,white_28%)] group-hover:[text-shadow:0_0_1px_color-mix(in_oklab,var(--primary)_58%,white_42%)]"
+						<span
+							className="align-middle text-3xl text-white/70 [text-shadow:0_0_0_transparent] transition-[color,text-shadow] duration-150 ease-out group-hover:text-[color-mix(in_oklab,var(--primary)_72%,white_28%)] group-hover:[text-shadow:0_0_1px_color-mix(in_oklab,var(--primary)_58%,white_42%)]"
 							style={
 								isHomeActive
 									? {
@@ -115,7 +266,10 @@ export default function Nav() {
 						</span>
 					</Link>
 
-						<nav aria-label="Primary" className="relative h-12 min-w-0 flex-1">
+					<nav
+						aria-label="Primary"
+						className="relative h-12 min-w-0 flex-1"
+					>
 						<div className="relative h-full w-full">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -123,14 +277,20 @@ export default function Nav() {
 								height="48"
 								viewBox="0 0 210 48"
 								fill="none"
-									className="absolute right-96 top-0 z-0 h-12 w-52.5"
+								className="absolute right-78 top-0 z-0 h-12 w-52.5"
 								role="presentation"
 								aria-hidden="true"
 							>
-								<mask id="path-1-inside-1-nav-main" fill="white">
+								<mask
+									id="path-1-inside-1-nav-main"
+									fill="white"
+								>
 									<path d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0" />
 								</mask>
-								<path d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0" fill="#220934" />
+								<path
+									d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0"
+									fill="#220934"
+								/>
 								<path
 									d="M0 -1C-0.552285 -1 -1 -0.552285 -1 0C-1 0.552285 -0.552285 1 0 1V0V-1ZM210 48V49H211V48H210ZM211 0C211 -0.552285 210.552 -1 210 -1C209.448 -1 209 -0.552285 209 0H210H211ZM57.7516 48V49H210V48V47H57.7516V48ZM210 48H211V0H210H209V48H210ZM0 0V1C9.31973 1 15.1441 3.90917 19.2727 8.19387C23.4583 12.5377 25.9728 18.3582 28.517 24.3887C31.0303 30.346 33.5776 36.5246 37.8674 41.1778C42.2197 45.8988 48.3065 49 57.7516 49V48V47C48.8212 47 43.2827 44.1012 39.3379 39.8222C35.3306 35.4754 32.909 29.654 30.3597 23.6113C27.8412 17.6418 25.1994 11.4623 20.7129 6.80613C16.1693 2.09083 9.80581 -1 0 -1V0Z"
 									fill="white"
@@ -139,85 +299,122 @@ export default function Nav() {
 								/>
 							</svg>
 
-								<div className="nav-rail-extension absolute right-0 w-100 top-0 z-0 h-12" />
+							<div className="nav-rail-extension absolute right-0 top-0 z-0 h-12 w-100" />
 
-								<div className="absolute z-10 flex h-full items-center justify-between right-0 pr-12">
-									<ul className="no-scrollbar flex min-w-0 flex-nowrap items-center gap-x-10 overflow-x-auto">
-											{navLinks.map((item) => (
-												<li key={item.label}>
-													{item.external ? (
-													<motion.a
-														href={item.href}
-														target="_blank"
-														rel="noreferrer"
-														className="nav-link-plain"
-														transition={{ duration: 0.1, ease: "easeOut" }}
+							<div className="absolute right-0 z-10 flex h-full items-center justify-between pr-8">
+								<ul className="no-scrollbar flex min-w-0 flex-nowrap items-center gap-x-10 overflow-x-auto">
+									{navLinks.map((item) => (
+										<li key={item.label}>
+											{item.external ? (
+												<motion.a
+													href={item.href}
+													target="_blank"
+													rel="noreferrer"
+													className="nav-link-plain"
+													transition={{
+														duration: 0.1,
+														ease: "easeOut",
+													}}
+												>
+													<motion.span
+														className="nav-link-label"
+														variants={
+															navLabelVariants
+														}
+														initial="rest"
+														animate="rest"
+														whileHover="hover"
+														whileTap="tap"
+														transition={{
+															duration: 0.1,
+															ease: "easeOut",
+														}}
 													>
-															<motion.span
-																className="nav-link-label"
-																variants={navLabelVariants}
-																initial="rest"
-																animate="rest"
-															whileHover="hover"
-															whileTap="tap"
-															transition={{ duration: 0.1, ease: "easeOut" }}
-														>
-															{item.label}
-														</motion.span>
-													</motion.a>
-													) : (
-														<Link
-															href={item.href}
-															className="nav-link-plain"
-															onClick={(event) => handleInternalNav(event, item.href)}
-														>
-															<motion.span
-																className="nav-link-label"
-																variants={navLabelVariants}
-																initial="rest"
-																animate={isNavItemActive(item.href) ? "active" : "rest"}
-																whileHover="hover"
-																whileTap="tap"
-																transition={{ duration: 0.1, ease: "easeOut" }}
-														>
-															{item.label}
-														</motion.span>
-													</Link>
-												)}
-											</li>
-										))}
-									</ul>
-								</div>
+														{item.label}
+													</motion.span>
+												</motion.a>
+											) : (
+												<Link
+													href={item.href}
+													className="nav-link-plain"
+													onClick={(event) =>
+														handleInternalNav(
+															event,
+															item.href
+														)
+													}
+												>
+													<motion.span
+														className="nav-link-label"
+														variants={
+															navLabelVariants
+														}
+														initial="rest"
+														animate={
+															isNavItemActive(
+																item.href
+															)
+																? "active"
+																: "rest"
+														}
+														whileHover="hover"
+														whileTap="tap"
+														transition={{
+															duration: 0.1,
+															ease: "easeOut",
+														}}
+													>
+														{item.label}
+													</motion.span>
+												</Link>
+											)}
+										</li>
+									))}
+								</ul>
 							</div>
-						</nav>
-					</div>
+						</div>
+					</nav>
+				</div>
 			</div>
 
-			<div
-				className="fixed bottom-0 left-0 z-50 flex items-end">
-				<DockBrandButton href="https://discord.gg/unblock" label="Discord">
+			<div className="fixed bottom-0 left-0 z-50 flex items-end">
+				<DockBrandButton
+					href="https://discord.gg/unblock"
+					label="Discord"
+				>
 					<FaDiscord />
 				</DockBrandButton>
-				<DockBrandButton href="https://github.com/titaniumnetwork-dev" label="GitHub">
+				<DockBrandButton
+					href="https://github.com/titaniumnetwork-dev"
+					label="GitHub"
+				>
 					<FaGithub />
 				</DockBrandButton>
 			</div>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="210"
-				height="48"
-				viewBox="0 0 210 48"
+				height="50"
+				viewBox="0 0 210 50"
 				style={{ transform: "rotate(180deg)" }}
 				fill="none"
-					className="fixed -left-4 bottom-0 z-0 h-12 w-52.5"
+				className="fixed -left-4 bottom-0 z-0 h-12 w-52.5"
 				role="presentation"
 				aria-hidden="true"
 			>
 				<mask id="path-1-inside-1-nav-main" fill="white">
 					<path d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0"></path>
 				</mask>
-				<path d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0" fill="#220934"></path>
-				<path d="M0 -1C-0.552285 -1 -1 -0.552285 -1 0C-1 0.552285 -0.552285 1 0 1V0V-1ZM210 48V49H211V48H210ZM211 0C211 -0.552285 210.552 -1 210 -1C209.448 -1 209 -0.552285 209 0H210H211ZM57.7516 48V49H210V48V47H57.7516V48ZM210 48H211V0H210H209V48H210ZM0 0V1C9.31973 1 15.1441 3.90917 19.2727 8.19387C23.4583 12.5377 25.9728 18.3582 28.517 24.3887C31.0303 30.346 33.5776 36.5246 37.8674 41.1778C42.2197 45.8988 48.3065 49 57.7516 49V48V47C48.8212 47 43.2827 44.1012 39.3379 39.8222C35.3306 35.4754 32.909 29.654 30.3597 23.6113C27.8412 17.6418 25.1994 11.4623 20.7129 6.80613C16.1693 2.09083 9.80581 -1 0 -1V0Z" fill="white" fillOpacity="0.141176" mask="url(#path-1-inside-1-nav-main)"></path>
+				<path
+					d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0"
+					fill="#220934"
+				></path>
+				<path
+					d="M0 -1C-0.552285 -1 -1 -0.552285 -1 0C-1 0.552285 -0.552285 1 0 1V0V-1ZM210 48V49H211V48H210ZM211 0C211 -0.552285 210.552 -1 210 -1C209.448 -1 209 -0.552285 209 0H210H211ZM57.7516 48V49H210V48V47H57.7516V48ZM210 48H211V0H210H209V48H210ZM0 0V1C9.31973 1 15.1441 3.90917 19.2727 8.19387C23.4583 12.5377 25.9728 18.3582 28.517 24.3887C31.0303 30.346 33.5776 36.5246 37.8674 41.1778C42.2197 45.8988 48.3065 49 57.7516 49V48V47C48.8212 47 43.2827 44.1012 39.3379 39.8222C35.3306 35.4754 32.909 29.654 30.3597 23.6113C27.8412 17.6418 25.1994 11.4623 20.7129 6.80613C16.1693 2.09083 9.80581 -1 0 -1V0Z"
+					fill="white"
+					fillOpacity="0.141176"
+					mask="url(#path-1-inside-1-nav-main)"
+				></path>
 			</svg>
 		</header>
 	);
@@ -233,16 +430,16 @@ function DockBrandButton({
 	children: ReactNode;
 }) {
 	return (
-			<a
-				href={href}
-				target="_blank"
-				rel="noreferrer"
-				aria-label={label}
-				className="dock-brand-button group relative block h-12 w-20"
-			>
-				<span className="dock-brand-icon absolute inset-0 z-10 flex items-center justify-center text-xl">
-					{children}
-				</span>
-			</a>
-		);
+		<a
+			href={href}
+			target="_blank"
+			rel="noreferrer"
+			aria-label={label}
+			className="dock-brand-button group relative block h-11 w-20"
+		>
+			<span className="dock-brand-icon absolute inset-0 z-10 flex items-center justify-center text-xl">
+				{children}
+			</span>
+		</a>
+	);
 }
