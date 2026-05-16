@@ -14,47 +14,62 @@ export default function Setup() {
 					<div className="legacy-stack">
 						<h1 id="usage">Usage</h1>
 						<p>
-							TitaniumNetwork&apos;s services can be utilized either by hosting
-							manually or using the officially hosted services. These services
-							such as InvisiProxy or AnuraOS can be obtained in the{" "}
+							TitaniumNetwork&apos;s services can be utilized
+							either by hosting manually or using the officially
+							hosted services. These services such as InvisiProxy
+							or AnuraOS can be obtained in the{" "}
 							<strong>
-								<a href="https://discord.gg/unblock" target="_blank">
+								<a
+									href="https://discord.gg/unblock"
+									target="_blank"
+								>
 									TN Discord
 								</a>
 							</strong>{" "}
-							with a brief overview on the <strong>
+							with a brief overview on the{" "}
+							<strong>
 								<Link href="/services">Services</Link>
-							</strong>.
+							</strong>
+							.
 						</p>
 						<h3>Web Proxy Services</h3>
 						<p>
-							In order to use a web proxy site, you would simply obtain any of our
-							official domains (URLs/mirrors) from the TitaniumNetwork discord.
+							In order to use a web proxy site, you would simply
+							obtain any of our official domains (URLs/mirrors)
+							from the TitaniumNetwork discord.
 						</p>
 						<p>
-							Example Mirror/URL: <code>https://invisiproxy.com</code>
+							Example Mirror/URL:{" "}
+							<code>https://invisiproxy.com</code>
 						</p>
 						<p>
-							Then you would just simply access the mirror URL on any modern
-							browser, enter in a site within the search engine on the proxy site
-							and enjoy unblocked content!
+							Then you would just simply access the mirror URL on
+							any modern browser, enter in a site within the
+							search engine on the proxy site and enjoy unblocked
+							content!
 						</p>
 						<h3>Kajigs</h3>
 						<p>
-							A repository of methods/exploits (found in the TN discord)
-							maintained by TitaniumNetwork you can employ enabling you to bypass
-							restrictions!
+							A repository of methods/exploits (found in the TN
+							discord) maintained by TitaniumNetwork you can
+							employ enabling you to bypass restrictions!
 						</p>
 						<p>
-							These exploits range from WebView bypasses, Extension bypasses,
-							chromeOS vulnerabilities, Windows elevation bypasses, and most web
-							filter bypasses.
+							These exploits range from WebView bypasses,
+							Extension bypasses, chromeOS vulnerabilities,
+							Windows elevation bypasses, and most web filter
+							bypasses.
 						</p>
 						<h3>Setup</h3>
 						<p>
-							If you wish to setup any of TitaniumNetwork&apos;s services please
-							check out{" "}
-							<strong><a href="https://docs.titaniumnetwork.org">the documentation</a></strong>.
+							If you wish to setup any of TitaniumNetwork&apos;s
+							services please check out{" "}
+							<strong>
+								<a href="https://docs.titaniumnetwork.org">
+									the documentation
+								</a>
+							</strong>
+							.
 						</p>
 					</div>
 				</section>

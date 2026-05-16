@@ -70,7 +70,11 @@ export default function Socials() {
 						{socials.map((social, index) => (
 							<li key={social.name}>
 								<FadeIn delay={index * 0.04 + 0.03}>
-									<Social url={social.url} name={social.name} Icon={social.icon} />
+									<Social
+										url={social.url}
+										name={social.name}
+										Icon={social.icon}
+									/>
 								</FadeIn>
 							</li>
 						))}

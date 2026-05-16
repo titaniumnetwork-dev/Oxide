@@ -49,5 +49,7 @@ A general list for any contributors. If you make a contribution add yourself her
 - Quite a Fancy Emerald
 - sexyduceduce
 - mdoryammilwalrus
+- Crllect
+- xmb9
 
 If you wish to support TitaniumNetwork please check out our Discord!

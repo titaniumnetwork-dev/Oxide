@@ -15,8 +15,9 @@ export default function Home() {
 						TitaniumNetwork
 					</h1>
 					<p className="mx-auto mt-6 max-w-[52ch] text-[clamp(1.02rem,1.9vw,1.34rem)] leading-relaxed text-white/78">
-						Services for a less restrictive web experience, built with a focus on
-						access, privacy, and practical deployment.
+						Services for a less restrictive web experience, built
+						with a focus on access, privacy, and practical
+						deployment.
 					</p>
 					<HeroActions
 						actions={[
@@ -31,8 +32,7 @@ export default function Home() {
 								label: "Documentation",
 								variant: "secondary",
 								external: true,
-								title:
-									"Look here for either contributing or hosting your own web proxy service using our various open-source projects!",
+								title: "Look here for either contributing or hosting your own web proxy service using our various open-source projects!",
 							},
 						]}
 					/>

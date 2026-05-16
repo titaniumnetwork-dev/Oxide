@@ -40,7 +40,11 @@ body {
 	color: var(--text);
 	font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
 	background:
-		radial-gradient(circle at 86% 14%, rgba(211, 70, 68, 0.08), transparent 36%),
+		radial-gradient(
+			circle at 86% 14%,
+			rgba(211, 70, 68, 0.08),
+			transparent 36%
+		),
 		linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
 }
 
@@ -58,13 +62,13 @@ h1,
 h2,
 h3 {
 	color: var(--text);
-	font-family: "Avenir Next",
-		"Segoe UI",
-		"Helvetica Neue",
+	font-family:
+		var(--font-raleway), "Avenir Next", "Segoe UI", "Helvetica Neue",
 		sans-serif;
 	font-weight: 600;
 	letter-spacing: -0.02em;
 	line-height: 0.98;
+	font-style: normal;
 }
 
 code {
@@ -85,20 +89,23 @@ code {
 	justify-content: center;
 	padding: 0.34rem 0.62rem;
 	color: var(--muted);
-	font-family: "Avenir Next",
-		"Segoe UI",
-		"Helvetica Neue",
-		sans-serif;
+	font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
 	font-size: 0.95rem;
 	font-weight: 400;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
-	transition: color 0.1s ease, text-shadow 0.1s ease, transform 0.1s ease;
+	transition:
+		color 0.1s ease,
+		text-shadow 0.1s ease,
+		transform 0.1s ease;
 }
 
 .nav-link-label {
 	display: inline-block;
-	transition: color 0.1s ease, text-shadow 0.1s ease, transform 0.1s ease;
+	transition:
+		color 0.1s ease,
+		text-shadow 0.1s ease,
+		transform 0.1s ease;
 }
 
 .nav-link-plain:hover,
@@ -116,10 +123,7 @@ code {
 	border-radius: 10px;
 	background: rgba(255, 255, 255, 0.04);
 	color: var(--muted);
-	font-family: "Avenir Next",
-		"Segoe UI",
-		"Helvetica Neue",
-		sans-serif;
+	font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
 	font-size: 0.92rem;
 	font-weight: 500;
 	letter-spacing: 0.08em;
@@ -152,7 +156,9 @@ code {
 	justify-content: center;
 	transform: scale(1);
 	color: rgba(255, 248, 251, 0.78);
-	filter: drop-shadow(0 0 0 color-mix(in oklab, var(--primary) 58%, white 42%));
+	filter: drop-shadow(
+		0 0 0 color-mix(in oklab, var(--primary) 58%, white 42%)
+	);
 	transition:
 		color 0.1s ease,
 		filter 0.1s ease,
@@ -164,13 +170,17 @@ code {
 .dock-brand-button:focus-visible .dock-brand-icon {
 	transform: scale(1.03);
 	color: color-mix(in oklab, var(--primary) 72%, white 28%);
-	filter: drop-shadow(0 0 0.5px color-mix(in oklab, var(--primary) 58%, white 42%));
+	filter: drop-shadow(
+		0 0 0.5px color-mix(in oklab, var(--primary) 58%, white 42%)
+	);
 }
 
 .dock-brand-button:active .dock-brand-icon {
 	transform: scale(0.97);
 	color: color-mix(in oklab, var(--primary) 64%, white 36%);
-	filter: drop-shadow(0 0 1px color-mix(in oklab, var(--primary) 52%, white 48%));
+	filter: drop-shadow(
+		0 0 1px color-mix(in oklab, var(--primary) 52%, white 48%)
+	);
 }
 
 .content-frame {
@@ -219,10 +229,7 @@ code {
 .legacy-stack {
 	display: grid;
 	gap: 1rem;
-	font-family: "Avenir Next",
-		"Segoe UI",
-		"Helvetica Neue",
-		sans-serif;
+	font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
 	font-weight: 400;
 }
 
@@ -254,7 +261,9 @@ code {
 .service-source,
 .service-name {
 	color: var(--text);
-	transition: color 0.18s ease, text-shadow 0.18s ease;
+	transition:
+		color 0.18s ease,
+		text-shadow 0.18s ease;
 }
 
 .legacy-stack a:hover,
@@ -381,7 +390,6 @@ code {
 }
 
 @media (max-width: 720px) {
-
 	.service-row-legacy,
 	.social-row-legacy {
 		flex-direction: row;

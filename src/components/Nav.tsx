@@ -49,13 +49,17 @@ export default function Nav() {
 			};
 
 	const isHomeActive = pathname === "/";
-	const isNavItemActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+	const isNavItemActive = (href: string) =>
+		pathname === href || pathname.startsWith(`${href}/`);
 
 	useEffect(() => {
 		setIsMobileMenuOpen(false);
 	}, [pathname]);
 
-	const handleInternalNav = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+	const handleInternalNav = (
+		event: React.MouseEvent<HTMLAnchorElement>,
+		href: string
+	) => {
 		setIsMobileMenuOpen(false);
 		if (prefersReducedMotion) return;
 		if (
@@ -87,7 +91,8 @@ export default function Nav() {
 							className="align-middle text-lg"
 							style={{
 								color: "color-mix(in oklab, var(--primary) 72%, white 28%)",
-								textShadow: "0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%)",
+								textShadow:
+									"0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%)",
 							}}
 						>
 							[
@@ -105,7 +110,8 @@ export default function Nav() {
 							className="align-middle text-lg"
 							style={{
 								color: "color-mix(in oklab, var(--primary) 72%, white 28%)",
-								textShadow: "0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%)",
+								textShadow:
+									"0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%)",
 							}}
 						>
 							]
@@ -114,7 +120,9 @@ export default function Nav() {
 
 					<button
 						type="button"
-						aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+						aria-label={
+							isMobileMenuOpen ? "Close menu" : "Open menu"
+						}
 						aria-expanded={isMobileMenuOpen}
 						aria-controls="mobile-main-nav"
 						onClick={() => setIsMobileMenuOpen((open) => !open)}
@@ -128,9 +136,21 @@ export default function Nav() {
 					{isMobileMenuOpen ? (
 						<motion.div
 							id="mobile-main-nav"
-							initial={prefersReducedMotion ? false : { opacity: 0, y: -8, scale: 0.985 }}
-							animate={prefersReducedMotion ? {} : { opacity: 1, y: 0, scale: 1 }}
-							exit={prefersReducedMotion ? {} : { opacity: 0, y: -6, scale: 0.99 }}
+							initial={
+								prefersReducedMotion
+									? false
+									: { opacity: 0, y: -8, scale: 0.985 }
+							}
+							animate={
+								prefersReducedMotion
+									? {}
+									: { opacity: 1, y: 0, scale: 1 }
+							}
+							exit={
+								prefersReducedMotion
+									? {}
+									: { opacity: 0, y: -6, scale: 0.99 }
+							}
 							transition={{ duration: 0.16, ease: "easeOut" }}
 							className="absolute left-3 right-3 top-14 z-30 rounded-xl border border-white/14 bg-[#220934]/96 p-3 shadow-[0_16px_34px_rgba(6,0,12,0.35)] backdrop-blur"
 						>
@@ -138,13 +158,27 @@ export default function Nav() {
 								{navLinks.map((item, index) => (
 									<motion.li
 										key={item.label}
-										initial={prefersReducedMotion ? false : { opacity: 0, y: -4 }}
-										animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
-										exit={prefersReducedMotion ? {} : { opacity: 0, y: -2 }}
+										initial={
+											prefersReducedMotion
+												? false
+												: { opacity: 0, y: -4 }
+										}
+										animate={
+											prefersReducedMotion
+												? {}
+												: { opacity: 1, y: 0 }
+										}
+										exit={
+											prefersReducedMotion
+												? {}
+												: { opacity: 0, y: -2 }
+										}
 										transition={{
 											duration: 0.14,
 											ease: "easeOut",
-											delay: prefersReducedMotion ? 0 : index * 0.02,
+											delay: prefersReducedMotion
+												? 0
+												: index * 0.02,
 										}}
 									>
 										{item.external ? (
@@ -153,7 +187,9 @@ export default function Nav() {
 												target="_blank"
 												rel="noreferrer"
 												className="mobile-nav-link"
-												onClick={() => setIsMobileMenuOpen(false)}
+												onClick={() =>
+													setIsMobileMenuOpen(false)
+												}
 											>
 												{item.label}
 											</a>
@@ -161,7 +197,12 @@ export default function Nav() {
 											<Link
 												href={item.href}
 												className={`mobile-nav-link ${isNavItemActive(item.href) ? "mobile-nav-link-active" : ""}`}
-												onClick={(event) => handleInternalNav(event, item.href)}
+												onClick={(event) =>
+													handleInternalNav(
+														event,
+														item.href
+													)
+												}
 											>
 												{item.label}
 											</Link>
@@ -196,17 +237,18 @@ export default function Nav() {
 							[
 						</span>
 						<span
-							className="mx-1.5 align-middle text-white/82 transition-colors duration-150 ease-out group-hover:text-white"
+							className="mx-1.5 align-middle text-white/82 transition-colors duration-150 ease-out group-hover:text-white font-['Raleway'] tracking-normal"
 							style={
 								isHomeActive
 									? {
 											color: "rgba(255,248,251,1)",
-											textShadow: "0 0 1px rgba(255,248,251,0.22)",
+											textShadow:
+												"0 0 1px rgba(255,248,251,0.22)",
 										}
 									: undefined
 							}
 						>
-							TITANIUMNETWORK
+							TitaniumNetwork
 						</span>
 						<span
 							className="align-middle text-3xl text-white/70 [text-shadow:0_0_0_transparent] transition-[color,text-shadow] duration-150 ease-out group-hover:text-[color-mix(in_oklab,var(--primary)_72%,white_28%)] group-hover:[text-shadow:0_0_1px_color-mix(in_oklab,var(--primary)_58%,white_42%)]"
@@ -224,7 +266,10 @@ export default function Nav() {
 						</span>
 					</Link>
 
-					<nav aria-label="Primary" className="relative h-12 min-w-0 flex-1">
+					<nav
+						aria-label="Primary"
+						className="relative h-12 min-w-0 flex-1"
+					>
 						<div className="relative h-full w-full">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -232,14 +277,20 @@ export default function Nav() {
 								height="48"
 								viewBox="0 0 210 48"
 								fill="none"
-								className="absolute right-86 top-0 z-0 h-12 w-52.5"
+								className="absolute right-78 top-0 z-0 h-12 w-52.5"
 								role="presentation"
 								aria-hidden="true"
 							>
-								<mask id="path-1-inside-1-nav-main" fill="white">
+								<mask
+									id="path-1-inside-1-nav-main"
+									fill="white"
+								>
 									<path d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0" />
 								</mask>
-								<path d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0" fill="#220934" />
+								<path
+									d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0"
+									fill="#220934"
+								/>
 								<path
 									d="M0 -1C-0.552285 -1 -1 -0.552285 -1 0C-1 0.552285 -0.552285 1 0 1V0V-1ZM210 48V49H211V48H210ZM211 0C211 -0.552285 210.552 -1 210 -1C209.448 -1 209 -0.552285 209 0H210H211ZM57.7516 48V49H210V48V47H57.7516V48ZM210 48H211V0H210H209V48H210ZM0 0V1C9.31973 1 15.1441 3.90917 19.2727 8.19387C23.4583 12.5377 25.9728 18.3582 28.517 24.3887C31.0303 30.346 33.5776 36.5246 37.8674 41.1778C42.2197 45.8988 48.3065 49 57.7516 49V48V47C48.8212 47 43.2827 44.1012 39.3379 39.8222C35.3306 35.4754 32.909 29.654 30.3597 23.6113C27.8412 17.6418 25.1994 11.4623 20.7129 6.80613C16.1693 2.09083 9.80581 -1 0 -1V0Z"
 									fill="white"
@@ -260,16 +311,24 @@ export default function Nav() {
 													target="_blank"
 													rel="noreferrer"
 													className="nav-link-plain"
-													transition={{ duration: 0.1, ease: "easeOut" }}
+													transition={{
+														duration: 0.1,
+														ease: "easeOut",
+													}}
 												>
 													<motion.span
 														className="nav-link-label"
-														variants={navLabelVariants}
+														variants={
+															navLabelVariants
+														}
 														initial="rest"
 														animate="rest"
 														whileHover="hover"
 														whileTap="tap"
-														transition={{ duration: 0.1, ease: "easeOut" }}
+														transition={{
+															duration: 0.1,
+															ease: "easeOut",
+														}}
 													>
 														{item.label}
 													</motion.span>
@@ -278,16 +337,32 @@ export default function Nav() {
 												<Link
 													href={item.href}
 													className="nav-link-plain"
-													onClick={(event) => handleInternalNav(event, item.href)}
+													onClick={(event) =>
+														handleInternalNav(
+															event,
+															item.href
+														)
+													}
 												>
 													<motion.span
 														className="nav-link-label"
-														variants={navLabelVariants}
+														variants={
+															navLabelVariants
+														}
 														initial="rest"
-														animate={isNavItemActive(item.href) ? "active" : "rest"}
+														animate={
+															isNavItemActive(
+																item.href
+															)
+																? "active"
+																: "rest"
+														}
 														whileHover="hover"
 														whileTap="tap"
-														transition={{ duration: 0.1, ease: "easeOut" }}
+														transition={{
+															duration: 0.1,
+															ease: "easeOut",
+														}}
 													>
 														{item.label}
 													</motion.span>
@@ -303,10 +378,16 @@ export default function Nav() {
 			</div>
 
 			<div className="fixed bottom-0 left-0 z-50 flex items-end">
-				<DockBrandButton href="https://discord.gg/unblock" label="Discord">
+				<DockBrandButton
+					href="https://discord.gg/unblock"
+					label="Discord"
+				>
 					<FaDiscord />
 				</DockBrandButton>
-				<DockBrandButton href="https://github.com/titaniumnetwork-dev" label="GitHub">
+				<DockBrandButton
+					href="https://github.com/titaniumnetwork-dev"
+					label="GitHub"
+				>
 					<FaGithub />
 				</DockBrandButton>
 			</div>
@@ -324,8 +405,16 @@ export default function Nav() {
 				<mask id="path-1-inside-1-nav-main" fill="white">
 					<path d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0"></path>
 				</mask>
-				<path d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0" fill="#220934"></path>
-				<path d="M0 -1C-0.552285 -1 -1 -0.552285 -1 0C-1 0.552285 -0.552285 1 0 1V0V-1ZM210 48V49H211V48H210ZM211 0C211 -0.552285 210.552 -1 210 -1C209.448 -1 209 -0.552285 209 0H210H211ZM57.7516 48V49H210V48V47H57.7516V48ZM210 48H211V0H210H209V48H210ZM0 0V1C9.31973 1 15.1441 3.90917 19.2727 8.19387C23.4583 12.5377 25.9728 18.3582 28.517 24.3887C31.0303 30.346 33.5776 36.5246 37.8674 41.1778C42.2197 45.8988 48.3065 49 57.7516 49V48V47C48.8212 47 43.2827 44.1012 39.3379 39.8222C35.3306 35.4754 32.909 29.654 30.3597 23.6113C27.8412 17.6418 25.1994 11.4623 20.7129 6.80613C16.1693 2.09083 9.80581 -1 0 -1V0Z" fill="white" fillOpacity="0.141176" mask="url(#path-1-inside-1-nav-main)"></path>
+				<path
+					d="M0 0C38.2511 0 21.0006 48 57.7516 48H210V0"
+					fill="#220934"
+				></path>
+				<path
+					d="M0 -1C-0.552285 -1 -1 -0.552285 -1 0C-1 0.552285 -0.552285 1 0 1V0V-1ZM210 48V49H211V48H210ZM211 0C211 -0.552285 210.552 -1 210 -1C209.448 -1 209 -0.552285 209 0H210H211ZM57.7516 48V49H210V48V47H57.7516V48ZM210 48H211V0H210H209V48H210ZM0 0V1C9.31973 1 15.1441 3.90917 19.2727 8.19387C23.4583 12.5377 25.9728 18.3582 28.517 24.3887C31.0303 30.346 33.5776 36.5246 37.8674 41.1778C42.2197 45.8988 48.3065 49 57.7516 49V48V47C48.8212 47 43.2827 44.1012 39.3379 39.8222C35.3306 35.4754 32.909 29.654 30.3597 23.6113C27.8412 17.6418 25.1994 11.4623 20.7129 6.80613C16.1693 2.09083 9.80581 -1 0 -1V0Z"
+					fill="white"
+					fillOpacity="0.141176"
+					mask="url(#path-1-inside-1-nav-main)"
+				></path>
 			</svg>
 		</header>
 	);
@@ -346,7 +435,7 @@ function DockBrandButton({
 			target="_blank"
 			rel="noreferrer"
 			aria-label={label}
-			className="dock-brand-button group relative block h-12 w-20"
+			className="dock-brand-button group relative block h-11 w-20"
 		>
 			<span className="dock-brand-icon absolute inset-0 z-10 flex items-center justify-center text-xl">
 				{children}
