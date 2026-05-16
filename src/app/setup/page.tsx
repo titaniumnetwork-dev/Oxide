@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { FadeIn } from "../../components/Motion";
 
 export const metadata: Metadata = {
 	title: "Setup",
@@ -7,63 +8,57 @@ export const metadata: Metadata = {
 
 export default function Setup() {
 	return (
-		<>
-			<div className="background"></div>
-			<div className="content">
-				<div className="docs">
-					<div data-aos="fade-right">
+		<main className="mx-auto w-full max-w-300 px-4 pb-16 pt-8 md:px-8">
+			<FadeIn>
+				<section className="content-frame mx-auto max-w-245">
+					<div className="legacy-stack">
 						<h1 id="usage">Usage</h1>
 						<p>
-							TitaniumNetwork's services can be utilized either by hosting
-							manually or using the officially hosted services. These servies
+							TitaniumNetwork&apos;s services can be utilized either by hosting
+							manually or using the officially hosted services. These services
 							such as InvisiProxy or AnuraOS can be obtained in the{" "}
-							<a href="https://discord.gg/unblock" target="_blank">
-								TN Discord
-							</a>{" "}
-							with a brief overview on the{" "}
-							<Link href="/services">Services</Link>.
+							<strong>
+								<a href="https://discord.gg/unblock" target="_blank">
+									TN Discord
+								</a>
+							</strong>{" "}
+							with a brief overview on the <strong>
+								<Link href="/services">Services</Link>
+							</strong>.
 						</p>
-						<br></br>
 						<h3>Web Proxy Services</h3>
 						<p>
-							In order to use a web proxy site, you would simply obtain any of
-							our official domains (URLs/mirrors) from the TitaniumNetwork
-							discord.
+							In order to use a web proxy site, you would simply obtain any of our
+							official domains (URLs/mirrors) from the TitaniumNetwork discord.
 						</p>
-						<br></br>
 						<p>
 							Example Mirror/URL: <code>https://invisiproxy.com</code>
 						</p>
-						<br></br>
 						<p>
 							Then you would just simply access the mirror URL on any modern
-							browser, enter in a site within the search engine on the proxy
-							site and enjoy unblocked content!
+							browser, enter in a site within the search engine on the proxy site
+							and enjoy unblocked content!
 						</p>
-						<br></br>
 						<h3>Kajigs</h3>
 						<p>
 							A repository of methods/exploits (found in the TN discord)
-							maintained by TitaniumNetwork you can employ enabling you to
-							bypass restrictions!
+							maintained by TitaniumNetwork you can employ enabling you to bypass
+							restrictions!
 						</p>
-						<br></br>
 						<p>
 							These exploits range from WebView bypasses, Extension bypasses,
 							chromeOS vulnerabilities, Windows elevation bypasses, and most web
 							filter bypasses.
 						</p>
-						<br></br>
 						<h3>Setup</h3>
-						<br></br>
 						<p>
-							If you wish to setup any of TitaniumNetwork's services please
+							If you wish to setup any of TitaniumNetwork&apos;s services please
 							check out{" "}
-							<a href="https://docs.titaniumnetwork.org">the documentation.</a>
+							<strong><a href="https://docs.titaniumnetwork.org">the documentation</a></strong>.
 						</p>
 					</div>
-				</div>
-			</div>
-		</>
+				</section>
+			</FadeIn>
+		</main>
 	);
 }
