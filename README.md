@@ -6,8 +6,6 @@
 
 [Join our Discord!](https://discord.gg/unblock)
 
-## TODO: This website needs a complete redesign!
-
 #### Overview
 
 TitaniumNetwork is an organization dedicated to providing services related to bypassing internet censorship. Our projects provide users with a less restrictive browsing experience. For this TN prioritizes the production and improvement of web proxy technologies.
@@ -49,5 +47,7 @@ A general list for any contributors. If you make a contribution add yourself her
 - Quite a Fancy Emerald
 - sexyduceduce
 - mdoryammilwalrus
+- Crllect
+- xmb9
 
 If you wish to support TitaniumNetwork please check out our Discord!
