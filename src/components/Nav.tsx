@@ -237,7 +237,7 @@ export default function Nav() {
 							[
 						</span>
 						<span
-							className="mx-1.5 align-middle text-white/82 transition-colors duration-150 ease-out group-hover:text-white font-['Raleway'] tracking-normal"
+							className="mx-1.5 align-middle text-white/82 transition-colors duration-150 ease-out group-hover:text-white font-['Raleway'] tracking-normal top-0.75 relative"
 							style={
 								isHomeActive
 									? {
