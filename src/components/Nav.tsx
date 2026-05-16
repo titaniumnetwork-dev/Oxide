@@ -87,7 +87,7 @@ export default function Nav() {
 							[
 						</span>
 							<span
-								className="mx-1.5 align-middle text-white/82 transition-colors duration-150 ease-out group-hover:text-white"
+								className="mx-1.5 align-middle text-white/82 transition-colors duration-150 ease-out group-hover:text-white font-['Raleway'] tracking-normal"
 							style={
 								isHomeActive
 									? {
@@ -97,7 +97,7 @@ export default function Nav() {
 									: undefined
 							}
 						>
-							TITANIUMNETWORK
+							TitaniumNetwork
 						</span>
 							<span
 								className="align-middle text-3xl text-white/70 [text-shadow:0_0_0_transparent] transition-[color,text-shadow] duration-150 ease-out group-hover:text-[color-mix(in_oklab,var(--primary)_72%,white_28%)] group-hover:[text-shadow:0_0_1px_color-mix(in_oklab,var(--primary)_58%,white_42%)]"

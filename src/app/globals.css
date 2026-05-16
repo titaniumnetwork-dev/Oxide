@@ -54,11 +54,15 @@ p {
 	line-height: 1.68;
 }
 
-h1,
+h1 {
+	font-family: var(--font-raleway), "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
 h2,
 h3 {
 	color: var(--text);
-	font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+	font-family: "Avenir Next", "Seoge UI", "Helvetica Neue", sans-serif;
 	font-weight: 600;
 	letter-spacing: -0.02em;
 	line-height: 0.98;
@@ -82,7 +86,7 @@ code {
 	justify-content: center;
 	padding: 0.34rem 0.62rem;
 	color: var(--muted);
-	font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+	font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
 	font-size: 0.95rem;
 	font-weight: 400;
 	letter-spacing: 0.08em;
@@ -174,7 +178,7 @@ code {
 .legacy-stack {
 	display: grid;
 	gap: 1rem;
-	font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+	font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
 	font-weight: 400;
 }
 

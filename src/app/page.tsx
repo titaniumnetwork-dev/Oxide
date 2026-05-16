@@ -31,8 +31,7 @@ export default function Home() {
 								label: "Documentation",
 								variant: "secondary",
 								external: true,
-								title:
-									"Look here for either contributing or hosting your own web proxy service using our various open-source projects!",
+								title: "Look here for either contributing or hosting your own web proxy service using our various open-source projects!",
 							},
 						]}
 					/>

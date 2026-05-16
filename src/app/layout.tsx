@@ -1,6 +1,13 @@
 import { Metadata, Viewport } from "next";
 import Nav from "../components/Nav";
+import { Raleway } from "next/font/google";
 import "./globals.css";
+
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["600"],
+  variable: "--font-raleway",
+});
 
 export const metadata: Metadata = {
 	title: "TitaniumNetwork",
@@ -28,7 +35,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
+		<html lang="en" className={raleway.variable}>
 			<head>
 				<script
 					type="application/ld+json"
