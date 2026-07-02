@@ -9,8 +9,9 @@
 		"format": "prettier --write .",
 		"lint": "next lint"
 	},
+	"packageManager": "pnpm@11.9.0",
 	"engines": {
-		"node": ">=22.0.0"
+		"node": ">=24.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "^24.10.1",
