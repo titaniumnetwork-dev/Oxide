@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
@@ -18,35 +18,33 @@ const navHoverShadowColor = "#ed9891";
 const navTapColor = "#ea8d86";
 const navTapShadowColor = "#f0a39c";
 
+const navLabelVariants = {
+	rest: {
+		scale: 1,
+		color: "rgba(255,248,251,0.76)",
+		textShadow: "0 0 0 rgba(255,248,251,0)",
+	},
+	hover: {
+		scale: 1.01,
+		color: navHoverColor,
+		textShadow: `0 0 1px ${navHoverShadowColor}`,
+	},
+	tap: {
+		scale: 0.97,
+		color: navTapColor,
+		textShadow: `0 0 1px ${navTapShadowColor}`,
+	},
+	active: {
+		scale: 1,
+		color: "rgba(255,248,251,0.94)",
+		textShadow: "0 0 1px rgba(255,248,251,0.38)",
+	},
+};
+
 export default function Nav() {
 	const pathname = usePathname();
 	const router = useRouter();
-	const prefersReducedMotion = useReducedMotion();
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-	const navLabelVariants = prefersReducedMotion
-		? undefined
-		: {
-				rest: {
-					scale: 1,
-					color: "rgba(255,248,251,0.76)",
-					textShadow: "0 0 0 rgba(255,248,251,0)",
-				},
-				hover: {
-					scale: 1.01,
-					color: navHoverColor,
-					textShadow: `0 0 1px ${navHoverShadowColor}`,
-				},
-				tap: {
-					scale: 0.97,
-					color: navTapColor,
-					textShadow: `0 0 1px ${navTapShadowColor}`,
-				},
-				active: {
-					scale: 1,
-					color: "rgba(255,248,251,0.94)",
-					textShadow: "0 0 1px rgba(255,248,251,0.38)",
-				},
-			};
 
 	const isHomeActive = pathname === "/";
 	const isNavItemActive = (href: string) =>
@@ -61,7 +59,6 @@ export default function Nav() {
 		href: string
 	) => {
 		setIsMobileMenuOpen(false);
-		if (prefersReducedMotion) return;
 		if (
 			event.defaultPrevented ||
 			event.button !== 0 ||
@@ -136,21 +133,9 @@ export default function Nav() {
 					{isMobileMenuOpen ? (
 						<motion.div
 							id="mobile-main-nav"
-							initial={
-								prefersReducedMotion
-									? false
-									: { opacity: 0, y: -8, scale: 0.985 }
-							}
-							animate={
-								prefersReducedMotion
-									? {}
-									: { opacity: 1, y: 0, scale: 1 }
-							}
-							exit={
-								prefersReducedMotion
-									? {}
-									: { opacity: 0, y: -6, scale: 0.99 }
-							}
+							initial={{ opacity: 0, y: -8, scale: 0.985 }}
+							animate={{ opacity: 1, y: 0, scale: 1 }}
+							exit={{ opacity: 0, y: -6, scale: 0.99 }}
 							transition={{ duration: 0.16, ease: "easeOut" }}
 							className="absolute left-3 right-3 top-14 z-30 rounded-xl border border-white/14 bg-[#220934]/96 p-3 shadow-[0_16px_34px_rgba(6,0,12,0.35)] backdrop-blur"
 						>
@@ -158,27 +143,13 @@ export default function Nav() {
 								{navLinks.map((item, index) => (
 									<motion.li
 										key={item.label}
-										initial={
-											prefersReducedMotion
-												? false
-												: { opacity: 0, y: -4 }
-										}
-										animate={
-											prefersReducedMotion
-												? {}
-												: { opacity: 1, y: 0 }
-										}
-										exit={
-											prefersReducedMotion
-												? {}
-												: { opacity: 0, y: -2 }
-										}
+										initial={{ opacity: 0, y: -4 }}
+										animate={{ opacity: 1, y: 0 }}
+										exit={{ opacity: 0, y: -2 }}
 										transition={{
 											duration: 0.14,
 											ease: "easeOut",
-											delay: prefersReducedMotion
-												? 0
-												: index * 0.02,
+											delay: index * 0.02,
 										}}
 									>
 										{item.external ? (
@@ -318,9 +289,7 @@ export default function Nav() {
 												>
 													<motion.span
 														className="nav-link-label"
-														variants={
-															navLabelVariants
-														}
+														variants={navLabelVariants}
 														initial="rest"
 														animate="rest"
 														whileHover="hover"
@@ -346,9 +315,7 @@ export default function Nav() {
 												>
 													<motion.span
 														className="nav-link-label"
-														variants={
-															navLabelVariants
-														}
+														variants={navLabelVariants}
 														initial="rest"
 														animate={
 															isNavItemActive(
