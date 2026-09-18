@@ -20,11 +20,6 @@ const serviceGroups = [
 				source: "https://gitlab.com/nightnetwork/daydreamx",
 			},
 			{
-				name: "Incognito",
-				href: "https://incog.works",
-				source: "https://github.com/MotorTruck1221/Incognito",
-			},
-			{
 				name: "Lunar",
 				href: "https://lunaron.top/",
 				source: "https://github.com/Lunar-Proxy/lunar-v2",
@@ -58,21 +53,16 @@ const serviceGroups = [
 				name: "Truffled",
 				href: "https://truffled.lol",
 				source: "https://github.com/aukak/truffled",
-			},
-			{
+      },
+   			{
 				name: "Space",
 				href: "https://gointospace.app",
 				source: "https://gitlab.com/nightnetwork/Space",
 			},
-			{
+      {
 				name: "Kazwire",
 				href: "https://kazwire.com",
 				source: "https://github.com/whos-evan/kazwire",
-			},
-			{
-				name: "Definitely Science",
-				href: "https://definitelyscience.com",
-				source: "https://github.com/titaniumnetwork-dev/Definitely-Science",
 			},
 		],
 	},
