@@ -62,7 +62,7 @@ const serviceGroups = [
       {
 				name: "Kazwire",
 				href: "https://kazwire.com",
-				source: "https://github.com/whos-evan/kazwire",
+				source: "https://github.com/zachmb/newkazwire",
 			},
 		],
 	},
