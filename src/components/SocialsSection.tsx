@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import {
 	FaDiscord,
 	FaGithub,
@@ -9,11 +8,7 @@ import {
 	FaYoutube,
 } from "react-icons/fa6";
 import { SiBluesky } from "react-icons/si";
-import { FadeIn } from "../../components/Motion";
-
-export const metadata: Metadata = {
-	title: "Socials",
-};
+import { FadeIn } from "./Motion";
 
 const socials = [
 	{
@@ -28,7 +23,7 @@ const socials = [
 	},
 	{
 		name: "YouTube",
-		url: "https://www.youtube.com/channel/UC6LaREFvs9L72SK1s2PcxNg",
+		url: "https://www.youtube.com/@Titanium-Network",
 		icon: FaYoutube,
 	},
 	{
@@ -58,30 +53,26 @@ const socials = [
 	},
 ];
 
-export default function Socials() {
+export function SocialsSection() {
 	return (
-		<main className="mx-auto w-full max-w-300 px-4 pb-16 pt-8 md:px-8">
-			<section className="content-frame mx-auto max-w-245">
-				<div className="legacy-stack">
-					<FadeIn>
-						<h2 id="titanium-socials">Socials</h2>
-					</FadeIn>
-					<ul className="social-list-legacy">
-						{socials.map((social, index) => (
-							<li key={social.name}>
-								<FadeIn delay={index * 0.04 + 0.03}>
-									<Social
-										url={social.url}
-										name={social.name}
-										Icon={social.icon}
-									/>
-								</FadeIn>
-							</li>
-						))}
-					</ul>
-				</div>
-			</section>
-		</main>
+		<div className="legacy-stack">
+			<FadeIn>
+				<h2 id="socials">Socials</h2>
+			</FadeIn>
+			<ul className="social-list-legacy">
+				{socials.map((social, index) => (
+					<li key={social.name}>
+						<FadeIn delay={index * 0.04 + 0.03}>
+							<Social
+								url={social.url}
+								name={social.name}
+								Icon={social.icon}
+							/>
+						</FadeIn>
+					</li>
+				))}
+			</ul>
+		</div>
 	);
 }
 

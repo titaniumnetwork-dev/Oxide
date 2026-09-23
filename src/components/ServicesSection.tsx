@@ -1,16 +1,11 @@
-import { Metadata } from "next";
-import { FadeIn } from "../../components/Motion";
-
-export const metadata: Metadata = {
-	title: "Services",
-};
+import { FadeIn } from "./Motion";
 
 const serviceGroups = [
 	{
 		title: "Browsing",
 		services: [
 			{
-				name: "InvisiProxy LTS",
+				name: "InvisiProxy LTS ⭐️",
 				href: "https://invisiproxy.com",
 				source: "https://github.com/QuiteAFancyEmerald/InvisiProxy/",
 			},
@@ -35,7 +30,7 @@ const serviceGroups = [
 		title: "WebOS",
 		services: [
 			{
-				name: "AnuraOS",
+				name: "AnuraOS ⭐️",
 				href: "https://anura.pro",
 				source: "https://github.com/MercuryWorkshop/anuraOS",
 			},
@@ -50,16 +45,16 @@ const serviceGroups = [
 		title: "Unblocked Games",
 		services: [
 			{
-				name: "Truffled",
+				name: "Truffled ⭐️",
 				href: "https://truffled.lol",
-				source: "https://github.com/aukak/truffled",
-      },
-   			{
+				source: "https://github.com/goodmeals/truffled",
+			},
+			{
 				name: "Space",
 				href: "https://gointospace.app",
 				source: "https://gitlab.com/nightnetwork/Space",
 			},
-      {
+			{
 				name: "Kazwire",
 				href: "https://kazwire.com",
 				source: "https://github.com/zachmb/newkazwire",
@@ -68,43 +63,37 @@ const serviceGroups = [
 	},
 ];
 
-export default function Services() {
+export function ServicesSection() {
 	return (
-		<main className="mx-auto w-full max-w-300 px-4 pb-16 pt-8 md:px-8">
-			<section className="content-frame mx-auto max-w-245">
-				<div className="legacy-stack services-stack">
-					<FadeIn>
-						<h2 id="web-proxy-services" className="services-kicker">
-							Web Proxy Services
-						</h2>
-					</FadeIn>
+		<div className="legacy-stack services-stack">
+			<FadeIn>
+				<h2 id="services" className="services-kicker">
+					Web Proxy Services
+				</h2>
+			</FadeIn>
 
-					{serviceGroups.map((group, index) => (
-						<FadeIn
-							className="service-group"
-							key={group.title}
-							delay={index * 0.05 + 0.02}
-						>
-							<h3 className="service-group-title">
-								{group.title}
-							</h3>
-							<ul className="service-list-legacy service-group-list">
-								{group.services.map((service) => (
-									<li key={service.name}>
-										<Service
-											href={service.href}
-											source={service.source}
-										>
-											{service.name}
-										</Service>
-									</li>
-								))}
-							</ul>
-						</FadeIn>
-					))}
-				</div>
-			</section>
-		</main>
+			{serviceGroups.map((group, index) => (
+				<FadeIn
+					className="service-group"
+					key={group.title}
+					delay={index * 0.05 + 0.02}
+				>
+					<h3 className="service-group-title">{group.title}</h3>
+					<ul className="service-list-legacy service-group-list">
+						{group.services.map((service) => (
+							<li key={service.name}>
+								<Service
+									href={service.href}
+									source={service.source}
+								>
+									{service.name}
+								</Service>
+							</li>
+						))}
+					</ul>
+				</FadeIn>
+			))}
+		</div>
 	);
 }
 

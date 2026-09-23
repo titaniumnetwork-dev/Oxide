@@ -5,7 +5,7 @@ import "./globals.css";
 
 const raleway = Raleway({
 	subsets: ["latin"],
-	weight: ["600"],
+	weight: ["600", "800"],
 	variable: "--font-raleway",
 });
 
@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 	initialScale: 1,
 	themeColor: {
 		media: "(prefers-color-scheme: dark)",
-		color: "#434c5e",
+		color: "#24202C",
 	},
 };
 
@@ -37,7 +37,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`bg-[#220934] text-white ${raleway.variable}`}
+			className={`bg-[#24202C] text-[#E0D3F5] ${raleway.variable}`}
 		>
 			<head>
 				<script

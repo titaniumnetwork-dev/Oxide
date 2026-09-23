@@ -1,16 +1,20 @@
 @import "tailwindcss";
 
 :root {
-	--bg: #1f003e;
-	--bg-deep: #250c3a;
-	--panel: #2a1041;
-	--panel-strong: #220934;
-	--line: rgba(255, 255, 255, 0.14);
-	--line-strong: rgba(211, 70, 68, 0.56);
-	--primary: #d34644;
-	--text: #fff8fb;
-	--muted: rgba(255, 248, 251, 0.76);
-	--shadow: 0 14px 30px rgba(6, 0, 12, 0.24);
+	--bg: #24202c;
+	--bg-deep: #3b2562;
+	--panel: #3b2562;
+	--panel-strong: #24202c;
+	--line: rgba(224, 211, 245, 0.14);
+	--line-strong: rgba(132, 89, 207, 0.56);
+	--primary: #8459cf;
+	--primary-soft: #9c59cf;
+	--primary-bright: #b759cf;
+	--lavender: #b295e4;
+	--violet-deep: #5d36a2;
+	--text: #e0d3f5;
+	--muted: rgba(224, 211, 245, 0.76);
+	--shadow: 0 14px 30px rgba(10, 6, 20, 0.4);
 }
 
 * {
@@ -42,7 +46,7 @@ body {
 	background:
 		radial-gradient(
 			circle at 86% 14%,
-			rgba(211, 70, 68, 0.08),
+			rgba(132, 89, 207, 0.16),
 			transparent 36%
 		),
 		linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
@@ -73,14 +77,81 @@ h3 {
 
 code {
 	padding: 0.14rem 0.45rem;
-	border: 1px solid rgba(255, 255, 255, 0.18);
+	border: 1px solid rgba(224, 211, 245, 0.18);
 	border-radius: 999px;
-	background: rgba(255, 255, 255, 0.05);
+	background: rgba(224, 211, 245, 0.05);
 	font-size: 0.94rem;
 }
 
 ::selection {
-	background: rgba(211, 70, 68, 0.34);
+	background: rgba(132, 89, 207, 0.34);
+}
+
+.tn-brand {
+	font-family:
+		var(--font-raleway), "Raleway", "Avenir Next", "Segoe UI",
+		"Helvetica Neue", sans-serif;
+	font-weight: 800;
+}
+
+.font-raleway {
+	font-family:
+		var(--font-raleway), "Raleway", "Avenir Next", "Segoe UI",
+		"Helvetica Neue", sans-serif;
+}
+
+.tn-home-active {
+	color: rgba(224, 211, 245, 1);
+	text-shadow: 0 0 1px rgba(224, 211, 245, 0.22);
+}
+
+
+.group:hover .tn-home-active {
+	color: var(--primary);
+	text-shadow: 0 0 1px
+		color-mix(in oklab, var(--primary) 58%, #E0D3F5 42%);
+}
+
+.hero-btn {
+	position: relative;
+	backdrop-filter: blur(8px) saturate(1.4);
+	-webkit-backdrop-filter: blur(8px) saturate(1.4);
+	box-shadow:
+		inset 0 1px 0 rgba(224, 211, 245, 0.3),
+		inset 0 -1px 1px rgba(10, 6, 20, 0.2);
+}
+
+@property --orbit-angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+.hero-btn::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	padding: 1.5px;
+	background: conic-gradient(
+		from var(--orbit-angle),
+		transparent 0%,
+		rgba(224, 211, 245, 1) 8%,
+		transparent 20%
+	);
+	-webkit-mask:
+		linear-gradient(#E0D3F5 0 0) content-box,
+		linear-gradient(#E0D3F5 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	animation: hero-btn-orbit 12s linear infinite;
+	pointer-events: none;
+}
+
+@keyframes hero-btn-orbit {
+	to {
+		--orbit-angle: 360deg;
+	}
 }
 
 .nav-link-plain {
@@ -89,9 +160,11 @@ code {
 	justify-content: center;
 	padding: 0.34rem 0.62rem;
 	color: var(--muted);
-	font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
-	font-size: 0.95rem;
-	font-weight: 400;
+	font-family:
+		var(--font-raleway), "Raleway", "Avenir Next", "Segoe UI",
+		"Helvetica Neue", sans-serif;
+	font-size: clamp(0.875rem, 0.52vw + 0.48rem, 1.35rem);
+	font-weight: 800;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	transition:
@@ -102,6 +175,9 @@ code {
 
 .nav-link-label {
 	display: inline-block;
+	position: relative;
+	top: 1px;
+	margin-right: -0.08em;
 	transition:
 		color 0.1s ease,
 		text-shadow 0.1s ease,
@@ -110,22 +186,47 @@ code {
 
 .nav-link-plain:hover,
 .nav-link-plain:focus-visible {
-	color: color-mix(in oklab, var(--primary) 72%, white 28%);
-	text-shadow: 0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%);
+	color: color-mix(in oklab, var(--primary) 72%, #E0D3F5 28%);
+	text-shadow: 0 0 1px color-mix(in oklab, var(--primary) 58%, #E0D3F5 42%);
 }
+
+.nav-separator {
+	color: rgba(224, 211, 245, 0.25);
+	user-select: none;
+}
+
+.nav-icon-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.34rem 0.4rem;
+	color: var(--muted);
+	font-size: clamp(0.9rem, 0.64vw + 0.475rem, 1.5rem);
+	transition:
+		color 0.1s ease,
+		transform 0.1s ease;
+}
+
+.nav-icon-link:hover,
+.nav-icon-link:focus-visible {
+	color: color-mix(in oklab, var(--primary) 72%, #E0D3F5 28%);
+}
+
 
 .mobile-nav-link {
 	display: flex;
 	align-items: center;
 	min-height: 2.6rem;
 	padding: 0.5rem 0.72rem;
-	border: 1px solid rgba(255, 255, 255, 0.12);
+	border: 1px solid rgba(224, 211, 245, 0.12);
 	border-radius: 10px;
-	background: rgba(255, 255, 255, 0.04);
+	background: rgba(224, 211, 245, 0.04);
 	color: var(--muted);
-	font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+	font-family:
+		var(--font-raleway), "Raleway", "Avenir Next", "Segoe UI",
+		"Helvetica Neue", sans-serif;
 	font-size: 0.92rem;
-	font-weight: 500;
+	font-weight: 800;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	transition:
@@ -137,50 +238,17 @@ code {
 
 .mobile-nav-link:hover,
 .mobile-nav-link:focus-visible {
-	border-color: color-mix(in oklab, var(--primary) 68%, white 32%);
+	border-color: color-mix(in oklab, var(--primary) 68%, #E0D3F5 32%);
 	background: color-mix(in oklab, var(--primary) 12%, transparent);
-	color: color-mix(in oklab, var(--primary) 72%, white 28%);
-	text-shadow: 0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%);
+	color: color-mix(in oklab, var(--primary) 72%, #E0D3F5 28%);
+	text-shadow: 0 0 1px color-mix(in oklab, var(--primary) 58%, #E0D3F5 42%);
 }
 
 .mobile-nav-link-active {
-	border-color: rgba(255, 255, 255, 0.25);
-	background: rgba(255, 255, 255, 0.1);
-	color: rgba(255, 248, 251, 0.95);
-	text-shadow: 0 0 1px rgba(255, 248, 251, 0.3);
-}
-
-.dock-brand-icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transform: scale(1);
-	color: rgba(255, 248, 251, 0.78);
-	filter: drop-shadow(
-		0 0 0 color-mix(in oklab, var(--primary) 58%, white 42%)
-	);
-	transition:
-		color 0.1s ease,
-		filter 0.1s ease,
-		text-shadow 0.1s ease,
-		transform 0.1s ease;
-}
-
-.dock-brand-button:hover .dock-brand-icon,
-.dock-brand-button:focus-visible .dock-brand-icon {
-	transform: scale(1.03);
-	color: color-mix(in oklab, var(--primary) 72%, white 28%);
-	filter: drop-shadow(
-		0 0 0.5px color-mix(in oklab, var(--primary) 58%, white 42%)
-	);
-}
-
-.dock-brand-button:active .dock-brand-icon {
-	transform: scale(0.97);
-	color: color-mix(in oklab, var(--primary) 64%, white 36%);
-	filter: drop-shadow(
-		0 0 1px color-mix(in oklab, var(--primary) 52%, white 48%)
-	);
+	border-color: rgba(224, 211, 245, 0.25);
+	background: rgba(224, 211, 245, 0.1);
+	color: rgba(224, 211, 245, 0.95);
+	text-shadow: 0 0 1px rgba(224, 211, 245, 0.3);
 }
 
 .content-frame {
@@ -191,7 +259,7 @@ code {
 
 .nav-rail-extension {
 	background: var(--panel-strong);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+	border-bottom: 1px solid rgba(224, 211, 245, 0.14);
 }
 
 .nav-rail-extension::before {
@@ -270,8 +338,8 @@ code {
 .service-name:hover,
 .service-source:hover,
 .social-name:hover {
-	color: color-mix(in oklab, var(--primary) 72%, white 28%);
-	text-shadow: 0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%);
+	color: color-mix(in oklab, var(--primary) 72%, #E0D3F5 28%);
+	text-shadow: 0 0 1px color-mix(in oklab, var(--primary) 58%, #E0D3F5 42%);
 }
 
 .services-stack {
@@ -295,7 +363,7 @@ code {
 .service-group-list {
 	margin-top: 0.5rem;
 	padding-top: 0.68rem;
-	border-top: 1px solid rgba(255, 255, 255, 0.08);
+	border-top: 1px solid rgba(224, 211, 245, 0.08);
 }
 
 .service-list-legacy,
@@ -312,9 +380,9 @@ code {
 	justify-content: space-between;
 	gap: 0.9rem;
 	padding: 0.84rem 0.92rem;
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(224, 211, 245, 0.1);
 	border-radius: 12px;
-	background: rgba(255, 255, 255, 0.025);
+	background: rgba(224, 211, 245, 0.025);
 	box-shadow: inset 0 0 0 1px transparent;
 	transition:
 		border-color 0.16s ease,
@@ -324,14 +392,14 @@ code {
 
 .service-row-legacy:hover,
 .social-row-legacy:hover {
-	border-color: rgba(211, 70, 68, 0.58);
-	background: rgba(255, 255, 255, 0.05);
-	box-shadow: inset 0 0 0 1px rgba(211, 70, 68, 0.24);
+	border-color: rgba(132, 89, 207, 0.58);
+	background: rgba(224, 211, 245, 0.05);
+	box-shadow: inset 0 0 0 1px rgba(132, 89, 207, 0.24);
 }
 
 .social-row-legacy:hover .social-name {
-	color: color-mix(in oklab, var(--primary) 72%, white 28%);
-	text-shadow: 0 0 1px color-mix(in oklab, var(--primary) 58%, white 42%);
+	color: color-mix(in oklab, var(--primary) 72%, #E0D3F5 28%);
+	text-shadow: 0 0 1px color-mix(in oklab, var(--primary) 58%, #E0D3F5 42%);
 }
 
 .service-name,
@@ -374,7 +442,7 @@ code {
 
 .social-row-legacy:hover .social-badge {
 	transform: scale(1.04);
-	border-color: color-mix(in oklab, var(--primary) 68%, white 32%);
+	border-color: color-mix(in oklab, var(--primary) 68%, #E0D3F5 32%);
 	background: color-mix(in oklab, var(--primary) 16%, transparent);
 }
 

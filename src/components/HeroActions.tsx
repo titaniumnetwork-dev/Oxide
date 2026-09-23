@@ -13,11 +13,11 @@ type HeroAction = {
 
 export function HeroActions({ actions }: { actions: HeroAction[] }) {
 	const baseButtonClass =
-		"inline-flex min-h-12 items-center justify-center rounded-full border px-5 py-2.5 text-[0.98rem] font-semibold leading-none tracking-[0.01em] whitespace-nowrap transition-[background-color,border-color,color,box-shadow,transform] duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/45";
+		"hero-btn inline-flex min-h-12 items-center justify-center rounded-full border px-5 py-2.5 text-[0.98rem] font-semibold leading-none tracking-[0.01em] whitespace-nowrap transition-[background-color,border-color,color,box-shadow,transform] duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E0D3F5]/45";
 	const primaryButtonClass =
-		"text-white border-white/20 bg-[linear-gradient(122deg,#e65153_0%,#cd3f5a_48%,#ff7d62_100%)]";
+		"text-[#E0D3F5] border-[#E0D3F5]/20 bg-[linear-gradient(122deg,#5D36A2_0%,#8459CF_48%,#9C59CF_100%)]";
 	const secondaryButtonClass =
-		"text-white border-white/30 bg-white/[0.06] hover:bg-white/[0.1] hover:border-white/50";
+		"text-[#E0D3F5] border-[#E0D3F5]/30 bg-[#E0D3F5]/[0.06] hover:bg-[#E0D3F5]/[0.1] hover:border-[#E0D3F5]/50";
 
 	return (
 		<motion.div
