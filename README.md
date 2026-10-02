@@ -39,7 +39,7 @@ However, it is simpler to use a reverse proxy that serves the static files gener
 
 #### Contributors
 
-[titaniumnetwork.org](https://titaniumnetwork.org)'s site content is currently being hosted and maintained by the TitaniumNetwork team. [Contact us](https://discord.gg/unblock) for any concerns.
+[titaniumnetwork.org](https://titaniumnetwork.org)'s site content is currently being hosted and maintained by the TitaniumNetwork team. [Contact us on Discord](https://discord.gg/unblock) or [email](mailto:root@titaniumnetwork.org) for any concerns.
 
 A general list for any contributors. If you make a contribution add yourself here!
 
