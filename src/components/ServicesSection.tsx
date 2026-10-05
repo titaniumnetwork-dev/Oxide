@@ -45,6 +45,11 @@ const serviceGroups = [
 		title: "Unblocked Games",
 		services: [
 			{
+				name: "Obsidian ⭐️",
+				href: "https://playobsidian.com/",
+				source: "https://github.com/titaniumnetwork-dev/Obsidian",
+			},
+			{
 				name: "Truffled ⭐️",
 				href: "https://truffled.lol",
 				source: "https://github.com/goodmeals/truffled",
