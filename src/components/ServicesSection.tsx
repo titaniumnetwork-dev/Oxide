@@ -15,11 +15,6 @@ const serviceGroups = [
 				source: "https://gitlab.com/nightnetwork/daydreamx",
 			},
 			{
-				name: "Lunar",
-				href: "https://lunaron.top/",
-				source: "https://github.com/Lunar-Proxy/lunar-v2",
-			},
-			{
 				name: "Nebula",
 				href: "https://nebulaservices.org",
 				source: "https://github.com/NebulaServices/Nebula",
